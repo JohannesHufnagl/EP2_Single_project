@@ -25,7 +25,7 @@ public class Space {
         //Results for the falling ball on the surface of earth are as follows:
         //Height 10m: 2 (sec = number of move(fx,fy,fz) calls)
         //Height 100m: 5 (sec = number of move(fx,fy,fz) calls)
-        /*
+
         Body ball1 = new Body();
         ball1.setPosition(0,0,100); // 100m height.
         ball1.setVelocity(0,0,0);
@@ -41,7 +41,7 @@ public class Space {
         ball2.setVelocity(0,0,0);
         ball2.setMass(15); // 15 kg
         System.out.println(fallToGround(ball1)); // 5
-        */
+
 
         //Further examples are to be tested (body in empty space, rocket, feather).
 
