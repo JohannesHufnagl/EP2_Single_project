@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 // Space is the actual program (executable class) using objects of class 'Body'.
 public class Space {
@@ -11,10 +12,11 @@ public class Space {
     // On the surface of earth the gravitational force on the ball weighing 1kg is
     // approximately as follows:
     public static final double GRAVITATIONAL_FORCE_ON_BALL =
-            G*MASS_OF_EARTH*MASS_OF_BALL/(RADIUS_OF_EARTH*RADIUS_OF_EARTH); // kg*m/sec² ... F = mass * acc
+            G * MASS_OF_EARTH * MASS_OF_BALL / (RADIUS_OF_EARTH * RADIUS_OF_EARTH); // kg*m/sec² ... F = mass * acc
     // This means each second its speed increases about 9.82 meters per second.
 
     //TODO: further variables, if needed.
+    private static int seconds = 0;
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
@@ -27,32 +29,41 @@ public class Space {
         //Height 100m: 5 (sec = number of move(fx,fy,fz) calls)
 
         Body ball1 = new Body();
-        ball1.setPosition(0,0,100); // 100m height.
-        ball1.setVelocity(0,0,-1);
+        ball1.setPosition(0, 0, 100); // 100m height.
+        ball1.setVelocity(0, 0, -1);
         ball1.setMass(1); // 1 kg
         System.out.println(fallToGround(ball1)); // 5
 
-        ball1.setPosition(0,0,10); // 10m height.
-        ball1.setVelocity(0,0,0);
+        //-------------------------
+        flyingBody(ball1, 10);
+        //-------------------------
+
+
+        ball1.setPosition(0, 0, 10); // 10m height.
+        ball1.setVelocity(0, 0, 0);
         System.out.println(fallToGround(ball1)); // 2
 
         Body ball2 = new Body();
-        ball2.setPosition(0,0,100); // 100m height.
-        ball2.setVelocity(0,0,0);
+        ball2.setPosition(0, 0, 100); // 100m height.
+        ball2.setVelocity(0, 0, 0);
         ball2.setMass(15); // 15 kg
         System.out.println(fallToGround(ball1)); // 5
 
 
         //Further examples are to be tested (body in empty space, rocket, feather).
 
-        ball1.move();
 
     }
 
     // Returns the number of move(fx,fy,fz) calls needed for 'b' hitting the ground, i.e.,
     // the method reduces the z-coordinate of 'b' until it becomes 0 or negative.
     public static int fallToGround(Body b) {
-
+        if (b.getXPosition() < 1 || b.getYPosition() < 1 || b.getZPosition() < 1) {
+            return seconds;
+        } else {
+            b.move();
+            fallToGround(b);
+        }
         //TODO: implement recursive method.
         return 0;
 
@@ -60,6 +71,14 @@ public class Space {
 
     //TODO: Define further methods as needed.
 
+    public static void flyingBody(Body b, int time) {
+        if (time > 0) {
+            b.move();
+            flyingBody(b,--time);
+        } else {
+            b.printPosition();
+        }
+    }
 }
 
 

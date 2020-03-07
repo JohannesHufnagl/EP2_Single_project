@@ -15,25 +15,35 @@ public class Body {
         position[0] = position[0] + VelocityVector[0];
         position[1] = position[1] + VelocityVector[1];
         position[2] = position[2] + VelocityVector[2];
-        setPosition(position[0],position[1],position[2]);
     }
 
     public void move(double fx, double fy, double fz) {
         position[0] = (VelocityVector[0] + fx) / mass;
         position[1] = (VelocityVector[1] + fy) / mass;
         position[2] = (VelocityVector[2] + fz) / mass;
-        setPosition(position[0],position[1],position[2]);
     }
 
 
     public void setPosition(double x, double y, double z) {
         position[0] = x;
         position[1] = y;
-        position[2]= z;
+        position[2] = z;
     }
 
-    public double [] getPosition() {
-        return position;
+    public double getXPosition(){
+        return position[0];
+    }
+
+    public double getYPosition(){
+        return position[1];
+    }
+
+    public double getZPosition(){
+        return position[2];
+    }
+
+    public void printPosition() {
+        System.out.println("x: " + position[0] + "\ty: " + position[1] + "\tz: " + position[2]);
     }
 
     public void setVelocity(double vx, double vy, double vz) {
