@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 // Space is the actual program (executable class) using objects of class 'Body'.
 public class Space {
@@ -34,12 +35,6 @@ public class Space {
         ball1.setMass(1); // 1 kg
         System.out.println(fallToGround(ball1)); // 5
 
-        //-------------------------
-        flyingBody(ball1, 10);
-        flyingBody(ball1, 0);
-        flyingBody(ball1, 100);
-        //-------------------------
-
 
         ball1.setPosition(0, 0, 10); // 10m height.
         ball1.setVelocity(0, 0, 0);
@@ -49,28 +44,43 @@ public class Space {
         ball2.setPosition(0, 0, 100); // 100m height.
         ball2.setVelocity(0, 0, 0);
         ball2.setMass(15); // 15 kg
-        System.out.println(fallToGround(ball1)); // 5
+        System.out.println(fallToGround(ball2)); // 5
 
 
         //Further examples are to be tested (body in empty space, rocket, feather).
 
+        Body spaceObject = new Body();
+        spaceObject.setPosition(0, 0, 0);
+        spaceObject.setVelocity(-1, 2, 3);
+        spaceObject.setMass(1);
+        flyingBody(spaceObject, 5);
 
+        Body rocket = new Body();
+        rocket.setPosition(10, 0, 0);
+        rocket.setVelocity(0, 0, 5e6);
+        spaceObject.setMass(2800);
+        rocketVelocity(rocket, 10, 1);
+
+        Body ball = new Body();
+        int droppingHeight = 50;
+        ball.setMass(1);
+        ball.setPosition(0, 0, droppingHeight);
+        System.out.println("The ball needs " + fallToGround(ball) + " seconds until it hits the ground");
+
+        Body feather = new Body();
+        feather.setPosition(0,0,0);
+        feather.setVelocity(0,0,0);
+        featherSimulation(feather,10);
     }
 
     // Returns the number of move(fx,fy,fz) calls needed for 'b' hitting the ground, i.e.,
     // the method reduces the z-coordinate of 'b' until it becomes 0 or negative.
     public static int fallToGround(Body b) {
-        if (b.getZPosition() < 1) {
-            System.out.println("Object fell to ground in " + seconds + " sec");
-            return seconds;
-        } else {
-            seconds++;
-            b.move(0,0,-GRAVITATIONAL_FORCE_ON_BALL*b.getMass());
-            fallToGround(b);
+        if (b.getZPosition() >= 0.0) {
+            b.move(0, 0, -GRAVITATIONAL_FORCE_ON_BALL * b.getMass());
+            return fallToGround(b) + 1;
         }
-        //TODO: implement recursive method.
         return 0;
-
     }
 
     //TODO: Define further methods as needed.
@@ -78,9 +88,32 @@ public class Space {
     public static void flyingBody(Body b, int time) {
         if (time > 0) {
             b.move();
-            flyingBody(b,--time);
+            flyingBody(b, --time);
         } else {
             b.printPosition();
+        }
+    }
+
+    public static void rocketVelocity(Body b, int time, int fuelBurn) {
+        if (time > 0) {
+            b.move(0, 0, b.getZVelocity());
+            b.setMass(b.getMass() - fuelBurn);
+            rocketVelocity(b, --time, fuelBurn);
+        } else {
+            b.printPosition();
+        }
+    }
+
+    public static void featherSimulation(Body b, int time) {
+        if (time > 0) {
+            Random rand = new Random();
+            int randomNumX = rand.nextInt((100) + 1);
+            int randomNumY = rand.nextInt((100) + 1);
+            int randomNumZ = rand.nextInt((100) + 1);
+
+            b.move(randomNumX, randomNumY, randomNumZ);
+            b.printPosition();
+            featherSimulation(b, --time);
         }
     }
 }

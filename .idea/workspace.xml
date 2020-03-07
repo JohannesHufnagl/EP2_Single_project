@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="added flyingBody method">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="added fallToGround method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
@@ -39,6 +39,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555618944995" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.116027534" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -170,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508412084367</updated>
-      <workItem from="1583582454372" duration="5588000" />
+      <workItem from="1583582454372" duration="9264000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -200,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583586858030</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added fallToGround method">
+      <created>1583588157838</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583588157838</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +235,8 @@
     <MESSAGE value="created first methods in the Body Class" />
     <MESSAGE value="changed variables to arrays" />
     <MESSAGE value="added flyingBody method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added flyingBody method" />
+    <MESSAGE value="added fallToGround method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fallToGround method" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

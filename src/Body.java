@@ -8,23 +8,23 @@ public class Body {
 
     private int mass;
     private double[] position = new double[3];
-    private double[] VelocityVector = new double[3];
+    private double[] velocityVector = new double[3];
 
 
     public void move() {
-        position[0] = position[0] + VelocityVector[0];
-        position[1] = position[1] + VelocityVector[1];
-        position[2] = position[2] + VelocityVector[2];
+        position[0] = position[0] + velocityVector[0];
+        position[1] = position[1] + velocityVector[1];
+        position[2] = position[2] + velocityVector[2];
     }
 
     public void move(double fx, double fy, double fz) {
-        VelocityVector[0] = (VelocityVector[0] + fx) / mass;
-        VelocityVector[1] = (VelocityVector[1] + fy) / mass;
-        VelocityVector[2] = (VelocityVector[2] + fz) / mass;
+        velocityVector[0] = velocityVector[0] + fx / mass;
+        velocityVector[1] = velocityVector[1] + fy / mass;
+        velocityVector[2] = velocityVector[2] + fz / mass;
 
-        position[0] = position[0] + VelocityVector[0];
-        position[1] = position[1] + VelocityVector[1];
-        position[2] = position[2] + VelocityVector[2];
+        position[0] = position[0] + velocityVector[0];
+        position[1] = position[1] + velocityVector[1];
+        position[2] = position[2] + velocityVector[2];
     }
 
 
@@ -46,14 +46,26 @@ public class Body {
         return position[2];
     }
 
+    public double getXVelocity(){
+        return velocityVector[0];
+    }
+
+    public double getYVelocity(){
+        return velocityVector[1];
+    }
+
+    public double getZVelocity(){
+        return velocityVector[2];
+    }
+
     public void printPosition() {
         System.out.println("x: " + position[0] + "\ty: " + position[1] + "\tz: " + position[2]);
     }
 
     public void setVelocity(double vx, double vy, double vz) {
-        VelocityVector[0] = vx;
-        VelocityVector[1] = vy;
-        VelocityVector[2] = vz;
+        velocityVector[0] = vx;
+        velocityVector[1] = vy;
+        velocityVector[2] = vz;
     }
 
     public void setMass(int mass) {
