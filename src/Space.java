@@ -28,7 +28,7 @@ public class Space {
 
         Body ball1 = new Body();
         ball1.setPosition(0,0,100); // 100m height.
-        ball1.setVelocity(0,0,0);
+        ball1.setVelocity(0,0,-1);
         ball1.setMass(1); // 1 kg
         System.out.println(fallToGround(ball1)); // 5
 
@@ -44,6 +44,8 @@ public class Space {
 
 
         //Further examples are to be tested (body in empty space, rocket, feather).
+
+        ball1.move();
 
     }
 

@@ -7,28 +7,33 @@ public class Body {
     //TODO: class definition.
 
     private int mass;
-    private double x, y, z;
-    private double[] VelocityVector;
+    private double[] position = new double[3];
+    private double[] VelocityVector = new double[3];
 
 
     public void move() {
-        x = x + VelocityVector[0];
-        y = y + VelocityVector[1];
-        z = z + VelocityVector[2];
+        position[0] = position[0] + VelocityVector[0];
+        position[1] = position[1] + VelocityVector[1];
+        position[2] = position[2] + VelocityVector[2];
+        setPosition(position[0],position[1],position[2]);
     }
 
     public void move(double fx, double fy, double fz) {
-        VelocityVector[0] = (VelocityVector[0] + fx) / mass;
-        VelocityVector[1] = (VelocityVector[1] + fy) / mass;
-        VelocityVector[2] = (VelocityVector[2] + fz) / mass;
-        
+        position[0] = (VelocityVector[0] + fx) / mass;
+        position[1] = (VelocityVector[1] + fy) / mass;
+        position[2] = (VelocityVector[2] + fz) / mass;
+        setPosition(position[0],position[1],position[2]);
     }
 
 
     public void setPosition(double x, double y, double z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        position[0] = x;
+        position[1] = y;
+        position[2]= z;
+    }
+
+    public double [] getPosition() {
+        return position;
     }
 
     public void setVelocity(double vx, double vy, double vz) {
