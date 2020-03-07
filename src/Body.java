@@ -18,9 +18,13 @@ public class Body {
     }
 
     public void move(double fx, double fy, double fz) {
-        position[0] = (VelocityVector[0] + fx) / mass;
-        position[1] = (VelocityVector[1] + fy) / mass;
-        position[2] = (VelocityVector[2] + fz) / mass;
+        VelocityVector[0] = (VelocityVector[0] + fx) / mass;
+        VelocityVector[1] = (VelocityVector[1] + fy) / mass;
+        VelocityVector[2] = (VelocityVector[2] + fz) / mass;
+
+        position[0] = position[0] + VelocityVector[0];
+        position[1] = position[1] + VelocityVector[1];
+        position[2] = position[2] + VelocityVector[2];
     }
 
 
@@ -54,5 +58,9 @@ public class Body {
 
     public void setMass(int mass) {
         this.mass = mass;
+    }
+
+    public int getMass() {
+        return mass;
     }
 }

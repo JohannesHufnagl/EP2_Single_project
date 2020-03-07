@@ -36,6 +36,8 @@ public class Space {
 
         //-------------------------
         flyingBody(ball1, 10);
+        flyingBody(ball1, 0);
+        flyingBody(ball1, 100);
         //-------------------------
 
 
@@ -58,10 +60,12 @@ public class Space {
     // Returns the number of move(fx,fy,fz) calls needed for 'b' hitting the ground, i.e.,
     // the method reduces the z-coordinate of 'b' until it becomes 0 or negative.
     public static int fallToGround(Body b) {
-        if (b.getXPosition() < 1 || b.getYPosition() < 1 || b.getZPosition() < 1) {
+        if (b.getZPosition() < 1) {
+            System.out.println("Object fell to ground in " + seconds + " sec");
             return seconds;
         } else {
-            b.move();
+            seconds++;
+            b.move(0,0,-GRAVITATIONAL_FORCE_ON_BALL*b.getMass());
             fallToGround(b);
         }
         //TODO: implement recursive method.
