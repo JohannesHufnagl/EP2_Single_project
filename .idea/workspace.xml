@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Started commenting Body()">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Commented Methods of Body() and Space() - v0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
@@ -235,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583755924895</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commented Methods of Body() and Space() - v0">
+      <created>1583757213457</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583757213457</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +275,8 @@
     <MESSAGE value="added the test cases, they are not working right now" />
     <MESSAGE value="featherSimulation is working and all instances are implemented but not&#10;polished" />
     <MESSAGE value="Started commenting Body()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started commenting Body()" />
+    <MESSAGE value="Commented Methods of Body() and Space() - v0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented Methods of Body() and Space() - v0" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

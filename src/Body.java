@@ -84,4 +84,16 @@ public class Body {
     public double getMass() {
         return mass;
     }
+
+    // Zusatzfrage
+    // Moves the object, but with considering external forces and repeating this for 'seconds' times
+    public void move(int seconds, double fx, double fy, double fz){
+        if(seconds >= 1){
+            move(fx,fy,fz);
+            move(--seconds,fx,fy,fz);
+        }
+    }
+
+
+
 }
