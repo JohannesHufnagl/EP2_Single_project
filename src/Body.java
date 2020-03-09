@@ -6,7 +6,7 @@
 public class Body {
     //TODO: class definition.
 
-    private int mass;
+    private double mass;
     private double[] position = new double[3];
     private double[] velocityVector = new double[3];
 
@@ -68,11 +68,11 @@ public class Body {
         velocityVector[2] = vz;
     }
 
-    public void setMass(int mass) {
+    public void setMass(double mass) {
         this.mass = mass;
     }
 
-    public int getMass() {
+    public double getMass() {
         return mass;
     }
 }
