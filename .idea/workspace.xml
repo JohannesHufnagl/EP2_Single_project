@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="flyingRoket is working">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="featherSimulation is working and all instances are implemented but not&#10;polished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
@@ -27,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="18efe41ad35461a9bc4a14066d518d6c3987bb82" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
@@ -156,9 +160,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Space" />
-        <item itemvalue="Application.Aufgabe2" />
-        <item itemvalue="Application.Aufgabe3" />
         <item itemvalue="Application.Aufgabe4" />
+        <item itemvalue="Application.Aufgabe3" />
+        <item itemvalue="Application.Aufgabe2" />
         <item itemvalue="Application.Aufgabe1" />
       </list>
     </recent_temporary>
@@ -217,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583611602841</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="featherSimulation is working and all instances are implemented but not&#10;polished">
+      <created>1583752116559</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583752116559</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,18 +259,10 @@
     <MESSAGE value="added flyingBody method" />
     <MESSAGE value="added fallToGround method" />
     <MESSAGE value="added the test cases, they are not working right now" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the test cases, they are not working right now" />
+    <MESSAGE value="featherSimulation is working and all instances are implemented but not&#10;polished" />
+    <option name="LAST_COMMIT_MESSAGE" value="featherSimulation is working and all instances are implemented but not&#10;polished" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Space.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="xDraw - barWidth / 2" language="JAVA" />

@@ -16,7 +16,6 @@ public class Space {
     // This means each second its speed increases about 9.82 meters per second.
 
     //TODO: further variables, if needed.
-    private static int seconds = 0;
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
@@ -47,7 +46,7 @@ public class Space {
 
         //Further examples are to be tested (body in empty space, rocket, feather).
         Body spaceObject = new Body();
-        spaceObject.setPosition(0, 0, 0);
+        spaceObject.setPosition(45, 23, -12);
         spaceObject.setVelocity(-1, 2, 3);
         spaceObject.setMass(1);
         flyingBody(spaceObject, 5);
