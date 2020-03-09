@@ -26,6 +26,17 @@ public class Body {
     private double[] position = new double[3];
     private double[] velocityVector = new double[3];
 
+    // TODO Constructor
+    public Body(){
+        this.mass = 1;
+        this.position[0] = 0;
+        this.position[1] = 0;
+        this.position[2] = 0;
+        this.velocityVector[0] = 0;
+        this.velocityVector[1] = 0;
+        this.velocityVector[2] = 0;
+    }
+
     // Sets the new position of the object
     // New position is the current position plus the velocity coordinates
     public void move() {
@@ -85,7 +96,7 @@ public class Body {
         return mass;
     }
 
-    // Zusatzfrage
+    /* Zusatzfrage
     // Moves the object, but with considering external forces and repeating this for 'seconds' times
     public void move(int seconds, double fx, double fy, double fz){
         if(seconds >= 1){
@@ -93,7 +104,5 @@ public class Body {
             move(--seconds,fx,fy,fz);
         }
     }
-
-
-
+    */
 }

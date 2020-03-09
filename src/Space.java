@@ -69,12 +69,14 @@ public class Space {
         feather.setMass(1);
         featherSimulation(feather, 10);
 
+        /*
         Body zusatz = new Body();
         zusatz.setPosition(0,0,0);
         zusatz.setVelocity(0,0,0);
         zusatz.setMass(1);
         zusatz.move(5,0,0,1);
         zusatz.printPosition();
+         */
     }
 
     // Returns the number of move(fx,fy,fz) calls needed for 'b' hitting the ground, i.e.,
@@ -134,7 +136,14 @@ public class Space {
     Wie könnte man move(seconds, fx,fy,fz) implementieren?
     Diese Nachricht soll bewirken, dass mehrere Bewegungsschritte durchgeführt werden.
 
-    Antwort:
+    Antwort: In Body():
+
+    public void move(int seconds, double fx, double fy, double fz){
+        if(seconds >= 1){
+            move(fx,fy,fz);
+            move(--seconds,fx,fy,fz);
+        }
+    }
 
  */
 
