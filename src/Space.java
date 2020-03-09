@@ -82,6 +82,8 @@ public class Space {
 
     //TODO: Define further methods as needed.
 
+    // prints the position of an flying body 'b' in space after, a specific 'time' in seconds,
+    // by using the printPosition() method
     private static void flyingBody(Body b, int time) {
         if (time > 0) {
             b.move();
@@ -91,6 +93,10 @@ public class Space {
         }
     }
 
+    // prints the position of an rocket 'b' in space,
+    // after a specific number of turns = 'time' in seconds,
+    // by using the printPosition() method
+    // Extra: The mass of the body is reduced by the value of fuelBurn
     private static void rocketVelocity(Body b, int time, int fuelBurn) {
         if (time > 0) {
             b.move(0, 0, b.getZVelocity());
@@ -101,6 +107,8 @@ public class Space {
         }
     }
 
+    // Simulates a feather flying influenced by wind
+    // the feathers external force (wind) is changing every call of the method and generated random
     private static void featherSimulation(Body b, int time) {
         if (time > 0) {
             Random rand = new Random();

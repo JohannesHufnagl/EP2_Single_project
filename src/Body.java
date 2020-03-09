@@ -6,23 +6,27 @@ public class Body {
     //TODO: class definition.
     /******************************************************
      class Body: Object in space with a 3D-position, velocity and mass
+     private variables:
+        double mass;
+        double[] position;
+        double[] velocityVector;
      public methods:
-     void move() ;
-     void move(double fx, double fy, double fz);
-     void setPosition(double x, double y, double z);
-     double getZPosition();
-     double getZVelocity();
-     void printPosition();
-     setVelocity(double vx, double vy, double vz);
-     setMass(double mass);
-     double getMass();
+        void move() ;
+        void move(double fx, double fy, double fz);
+        void setPosition(double x, double y, double z);
+        double getZPosition();
+        double getZVelocity();
+        void printPosition();
+        setVelocity(double vx, double vy, double vz);
+        setMass(double mass);
+        double getMass();
      ******************************************************/
 
     private double mass;
     private double[] position = new double[3];
     private double[] velocityVector = new double[3];
 
-    // Sets the new position of the Body
+    // Sets the new position of the object
     // New position is the current position plus the velocity coordinates
     public void move() {
         position[0] = position[0] + velocityVector[0];
@@ -48,26 +52,12 @@ public class Body {
         position[2] = z;
     }
 
-    public double getXPosition() {
-        return position[0];
-    }
-
-    public double getYPosition() {
-        return position[1];
-    }
-
+    // returns the position of the z-coordinate from the object
     public double getZPosition() {
         return position[2];
     }
 
-    public double getXVelocity() {
-        return velocityVector[0];
-    }
-
-    public double getYVelocity() {
-        return velocityVector[1];
-    }
-
+    // returns the velocity of the z-coordinate from the object
     public double getZVelocity() {
         return velocityVector[2];
     }
@@ -85,10 +75,12 @@ public class Body {
         velocityVector[2] = vz;
     }
 
+    // sets the mass of an object
     public void setMass(double mass) {
         this.mass = mass;
     }
 
+    // returns the mass of an object
     public double getMass() {
         return mass;
     }
