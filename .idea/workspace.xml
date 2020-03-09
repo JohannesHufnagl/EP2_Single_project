@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Added a method for the &quot;Zusatzfrage&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="created a default constructor">
       <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -249,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583757795644</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="created a default constructor">
+      <created>1583762692232</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583762692232</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +289,8 @@
     <MESSAGE value="Started commenting Body()" />
     <MESSAGE value="Commented Methods of Body() and Space() - v0" />
     <MESSAGE value="Added a method for the &quot;Zusatzfrage&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a method for the &quot;Zusatzfrage&quot;" />
+    <MESSAGE value="created a default constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a default constructor" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

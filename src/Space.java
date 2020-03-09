@@ -120,12 +120,10 @@ public class Space {
     // the feathers external force (wind) is changing every call of the method and generated random
     private static void featherSimulation(Body b, int time) {
         if (time > 0) {
-            Random rand = new Random();
-            int randomNumX = rand.nextInt(20) - 10;
-            int randomNumY = rand.nextInt(20) - 10;
-            int randomNumZ = rand.nextInt(20) - 10;
-
-            b.move(randomNumX, randomNumY, randomNumZ);
+            double randX = Math.random() * 100 - 50;
+            double randY = Math.random() * 100 - 50;
+            double randZ = Math.random() * 100 - 50;
+            b.move(randX, randY, randZ);
             b.printPosition();
             featherSimulation(b, --time);
         }
