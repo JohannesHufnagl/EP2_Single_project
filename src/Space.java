@@ -31,7 +31,7 @@ public class Space {
 
         Body ball1 = new Body();
         ball1.setPosition(0, 0, 100); // 100m height.
-        ball1.setVelocity(0, 0, -1);
+        ball1.setVelocity(0, 0, 0);
         ball1.setMass(1); // 1 kg
         System.out.println(fallToGround(ball1)); // 5
 
@@ -58,8 +58,8 @@ public class Space {
         Body rocket = new Body();
         rocket.setPosition(10, 0, 0);
         rocket.setVelocity(0, 0, 5e6);
-        spaceObject.setMass(2800);
-        rocketVelocity(rocket, 10, 1);
+        rocket.setMass(2800);
+        rocketVelocity(rocket, 10, 100);
 
         Body ball = new Body();
         int droppingHeight = 50;
@@ -118,5 +118,11 @@ public class Space {
     }
 }
 
+/*
+    Wie könnte man move(seconds, fx,fy,fz) implementieren?
+    Diese Nachricht soll bewirken, dass mehrere Bewegungsschritte durchgeführt werden.
 
+    Antwort:
+
+ */
 
