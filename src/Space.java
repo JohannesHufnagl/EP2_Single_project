@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Random;
 
 // Space is the actual program (executable class) using objects of class 'Body'.
@@ -35,7 +34,7 @@ public class Space {
         ball1.setMass(1); // 1 kg
         System.out.println(fallToGround(ball1)); // 5
 
-
+        //Changing position
         ball1.setPosition(0, 0, 10); // 10m height.
         ball1.setVelocity(0, 0, 0);
         System.out.println(fallToGround(ball1)); // 2
@@ -46,9 +45,7 @@ public class Space {
         ball2.setMass(15); // 15 kg
         System.out.println(fallToGround(ball2)); // 5
 
-
         //Further examples are to be tested (body in empty space, rocket, feather).
-
         Body spaceObject = new Body();
         spaceObject.setPosition(0, 0, 0);
         spaceObject.setVelocity(-1, 2, 3);
@@ -68,9 +65,10 @@ public class Space {
         System.out.println("The ball needs " + fallToGround(ball) + " seconds until it hits the ground");
 
         Body feather = new Body();
-        feather.setPosition(0,0,0);
-        feather.setVelocity(0,0,0);
-        featherSimulation(feather,10);
+        feather.setPosition(0, 0, 0);
+        feather.setVelocity(0, 0, 0);
+        feather.setMass(1);
+        featherSimulation(feather, 10);
     }
 
     // Returns the number of move(fx,fy,fz) calls needed for 'b' hitting the ground, i.e.,
@@ -85,7 +83,7 @@ public class Space {
 
     //TODO: Define further methods as needed.
 
-    public static void flyingBody(Body b, int time) {
+    private static void flyingBody(Body b, int time) {
         if (time > 0) {
             b.move();
             flyingBody(b, --time);
@@ -94,7 +92,7 @@ public class Space {
         }
     }
 
-    public static void rocketVelocity(Body b, int time, int fuelBurn) {
+    private static void rocketVelocity(Body b, int time, int fuelBurn) {
         if (time > 0) {
             b.move(0, 0, b.getZVelocity());
             b.setMass(b.getMass() - fuelBurn);
@@ -104,12 +102,12 @@ public class Space {
         }
     }
 
-    public static void featherSimulation(Body b, int time) {
+    private static void featherSimulation(Body b, int time) {
         if (time > 0) {
             Random rand = new Random();
-            int randomNumX = rand.nextInt((100) + 1);
-            int randomNumY = rand.nextInt((100) + 1);
-            int randomNumZ = rand.nextInt((100) + 1);
+            int randomNumX = rand.nextInt(20) - 10;
+            int randomNumY = rand.nextInt(20) - 10;
+            int randomNumZ = rand.nextInt(20) - 10;
 
             b.move(randomNumX, randomNumY, randomNumZ);
             b.printPosition();

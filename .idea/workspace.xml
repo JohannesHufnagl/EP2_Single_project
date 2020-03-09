@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="added the test cases, they are not working right now">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="flyingRoket is working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
     </list>
@@ -39,7 +39,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555618944995" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.116027534" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -170,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508412084367</updated>
-      <workItem from="1583582454372" duration="10679000" />
+      <workItem from="1583582454372" duration="13684000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -214,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583611602841</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="flyingRoket is working">
+      <created>1583745380628</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583745380628</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,18 +250,10 @@
     <MESSAGE value="added flyingBody method" />
     <MESSAGE value="added fallToGround method" />
     <MESSAGE value="added the test cases, they are not working right now" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the test cases, they are not working right now" />
+    <MESSAGE value="flyingRoket is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="flyingRoket is working" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Space.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="xDraw - barWidth / 2" language="JAVA" />
