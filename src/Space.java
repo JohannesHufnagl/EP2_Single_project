@@ -49,24 +49,27 @@ public class Space {
         spaceObject.setPosition(45, 23, -12);
         spaceObject.setVelocity(-1, 2, 3);
         spaceObject.setMass(1);
+        System.out.print("\nThe space objects new position is: ");
         flyingBody(spaceObject, 5);
 
         Body rocket = new Body();
         rocket.setPosition(10, 0, 0);
         rocket.setVelocity(0, 0, 5e6);
-        rocket.setMass(2800);
-        rocketVelocity(rocket, 10, 100);
+        rocket.setMass(2800000); // Saturn V rocket
+        System.out.print("\nThe rockets new position is: ");
+        rocketVelocity(rocket, 10, 10000);
 
         Body ball = new Body();
-        int droppingHeight = 50;
-        ball.setMass(1);
+        int droppingHeight = 5000;
+        ball.setMass(100);
         ball.setPosition(0, 0, droppingHeight);
-        System.out.println("The ball needs " + fallToGround(ball) + " seconds until it hits the ground");
+        System.out.println("\nThe ball needs " + fallToGround(ball) + " seconds until it hits the ground");
 
         Body feather = new Body();
         feather.setPosition(0, 0, 0);
         feather.setVelocity(0, 0, 0);
-        feather.setMass(1);
+        feather.setMass(0.1);
+        System.out.println("\nFeather-Simulation: ");
         featherSimulation(feather, 10);
 
         /*
@@ -120,9 +123,9 @@ public class Space {
     // the feathers external force (wind) is changing every call of the method and generated random
     private static void featherSimulation(Body b, int time) {
         if (time > 0) {
-            double randX = Math.random() * 100 - 50;
-            double randY = Math.random() * 100 - 50;
-            double randZ = Math.random() * 100 - 50;
+            double randX = (Math.random() * 5 - 2.5);
+            double randY = (Math.random() * 5 - 2.5);
+            double randZ = (Math.random() * 5 - 2.5);
             b.move(randX, randY, randZ);
             b.printPosition();
             featherSimulation(b, --time);
@@ -134,7 +137,7 @@ public class Space {
     Wie könnte man move(seconds, fx,fy,fz) implementieren?
     Diese Nachricht soll bewirken, dass mehrere Bewegungsschritte durchgeführt werden.
 
-    Antwort: In Body():
+    Antwort: In class Body:
 
     public void move(int seconds, double fx, double fy, double fz){
         if(seconds >= 1){

@@ -40,18 +40,18 @@ public class Body {
     // Sets the new position of the object
     // New position is the current position plus the velocity coordinates
     public void move() {
-        position[0] = position[0] + velocityVector[0];
-        position[1] = position[1] + velocityVector[1];
-        position[2] = position[2] + velocityVector[2];
+        position[0] += velocityVector[0];
+        position[1] += velocityVector[1];
+        position[2] += velocityVector[2];
     }
 
     // Moves the object, but with considering external forces
     // First the velocity vector is being calculated
     // With the newly calculated velocity the move() method gets called
     public void move(double fx, double fy, double fz) {
-        velocityVector[0] = velocityVector[0] + fx / mass;
-        velocityVector[1] = velocityVector[1] + fy / mass;
-        velocityVector[2] = velocityVector[2] + fz / mass;
+        velocityVector[0] += (fx / mass);
+        velocityVector[1] += (fy / mass);
+        velocityVector[2] += (fz / mass);
         move();
     }
 
@@ -75,7 +75,7 @@ public class Body {
 
     // Method to print out the current position of the object to the console
     public void printPosition() {
-        System.out.println("x: " + position[0] + "\ty: " + position[1] + "\tz: " + position[2]);
+        System.out.println(String.format("x: %.2f\ty: %.2f\tz: %.2f" , position[0],position[1],position[2]));
     }
 
     // Method to set a specific velocity for an object

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="created a default constructor">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Changed the way of random number generation to Math.random()">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Body.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,6 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1508412084367</updated>
       <workItem from="1583582454372" duration="10679000" />
+      <workItem from="1584020970081" duration="2249000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -254,11 +257,28 @@
       <option name="project" value="LOCAL" />
       <updated>1583762692232</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changed the way of random number generation to Math.random()">
+      <created>1583771643810</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1583771643810</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -290,7 +310,8 @@
     <MESSAGE value="Commented Methods of Body() and Space() - v0" />
     <MESSAGE value="Added a method for the &quot;Zusatzfrage&quot;" />
     <MESSAGE value="created a default constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a default constructor" />
+    <MESSAGE value="Changed the way of random number generation to Math.random()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the way of random number generation to Math.random()" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
