@@ -48,30 +48,29 @@ public class Space {
         Body spaceObject = new Body();
         spaceObject.setPosition(45, 23, -12);
         spaceObject.setVelocity(-1, 2, 3);
-        spaceObject.setMass(1);
+        spaceObject.setMass(1); // 1kg
         System.out.print("\nThe space objects new position is: ");
-        flyingBody(spaceObject, 5);
+        flyingBody(spaceObject, 5); // time = 5sec
 
         Body rocket = new Body();
         rocket.setPosition(10, 0, 0);
         rocket.setVelocity(0, 0, 5e6);
-        rocket.setMass(2800000); // Saturn V rocket
+        rocket.setMass(2800000); // Saturn V rocket 2800 tons
         System.out.print("\nThe rockets new position is: ");
-        rocketVelocity(rocket, 10, 10000);
+        rocketVelocity(rocket, 10, 10000); // time = 5sec, fuelBurn = 10000 l/sec
 
         Body ball = new Body();
-        int droppingHeight = 5000;
-        ball.setMass(100);
+        int droppingHeight = 5000; // 5000m
+        ball.setMass(100); // 100kg
         ball.setPosition(0, 0, droppingHeight);
         System.out.println("\nThe ball needs " + fallToGround(ball) + " seconds until it hits the ground");
 
         Body feather = new Body();
         feather.setPosition(0, 0, 0);
         feather.setVelocity(0, 0, 0);
-        feather.setMass(0.1);
+        feather.setMass(0.1); // 100g (big feather, maybe from a ostrich)
         System.out.println("\nFeather-Simulation: ");
-        featherSimulation(feather, 10);
-
+        featherSimulation(feather, 10); // time = 10sec
         /*
         Body zusatz = new Body();
         zusatz.setPosition(0,0,0);
