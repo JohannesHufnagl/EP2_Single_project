@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="revising the comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CelestialBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector3.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,17 +71,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Space">
+  <component name="RunManager" selected="Application.Simulation">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Aufgabe1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Aufgabe1" />
-      <module name="Aufgabenblatt1" />
-      <option name="VM_PARAMETERS" value="-ea" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,6 +100,14 @@
       <module name="Aufgabenblatt1" />
       <option name="INPUT_FILE" value="$PROJECT_DIR$/src/temperature_data.csv" />
       <option name="VM_PARAMETERS" value="-ea" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Simulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Simulation" />
+      <module name="Aufgabenblatt1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,19 +152,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Aufgabe1" />
       <item itemvalue="Application.Aufgabe2" />
       <item itemvalue="Application.Aufgabe3" />
       <item itemvalue="Application.Aufgabe4" />
       <item itemvalue="Application.Space" />
+      <item itemvalue="Application.Simulation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Simulation" />
         <item itemvalue="Application.Space" />
         <item itemvalue="Application.Aufgabe4" />
         <item itemvalue="Application.Aufgabe3" />
         <item itemvalue="Application.Aufgabe2" />
-        <item itemvalue="Application.Aufgabe1" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +181,7 @@
       <workItem from="1583582454372" duration="10679000" />
       <workItem from="1584020970081" duration="3612000" />
       <workItem from="1584089956354" duration="3999000" />
+      <workItem from="1584114253105" duration="2071000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>

@@ -4,11 +4,22 @@ import java.awt.*;
 public class Vector3 {
 
     //TODO: change modifiers.
-    public double x;
-    public double y;
-    public double z;
+    private double x;
+    private double y;
+    private double z;
 
     //TODO: define constructor.
+    public Vector3() {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+    }
+
+    public Vector3(double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 
     // Returns the sum of this vector and vector 'v'.
     public Vector3 plus(Vector3 v) {
