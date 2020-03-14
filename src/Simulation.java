@@ -17,9 +17,9 @@ public class Simulation {
                 "Sol",
                 1.989e30,
                 696340e3,
-                 new Vector3(),
-                 new Vector3(),
-                 StdDraw.YELLOW);
+                new Vector3(0,0,0),
+                new Vector3(0,0,0),
+                StdDraw.YELLOW);
         /*
         sun.name = "Sol";
         sun.mass = 1.989e30; // kg
@@ -40,9 +40,9 @@ public class Simulation {
                 "Earth",
                 5.972e24,
                 6371e3,
-                 new Vector3(148e9, 0, 0),
-                 new Vector3(0, 29.29e3, 0),
-                 StdDraw.BLUE);
+                new Vector3(148e9, 0, 0),
+                new Vector3(0, 29.29e3, 0),
+                StdDraw.BLUE);
         /*
         earth.name = "Earth";
         earth.mass = 5.972e24; // kg
@@ -63,9 +63,9 @@ public class Simulation {
                 "Mercury",
                 3.301e23,
                 2.4397e3,
-                 new Vector3(-46.0e9, 0, 0),
-                 new Vector3(0, -47.87e3, 0),
-                 StdDraw.RED);
+                new Vector3(-46.0e9, 0, 0),
+                new Vector3(0, -47.87e3, 0),
+                StdDraw.RED);
         /*
         mercury.name = "Mercury";
         mercury.mass = 3.301e23;
@@ -105,27 +105,15 @@ public class Simulation {
                 forceOnBody[i] = new Vector3(); // begin with zero
                 for (int j = 0; j < bodies.length; j++) {
                     if (i == j) continue;
-                    Vector3 forceToAdd = gravitationalForce(bodies[i], bodies[j]);
-                    forceOnBody[i] = plus(forceOnBody[i], forceToAdd);
+                    Vector3 forceToAdd = bodies[i].gravitationalForce(bodies[j]);
+                    forceOnBody[i] = forceOnBody[i].plus(forceToAdd);
                 }
             }
             // now forceOnBody[i] holds the force vector exerted on body with index i.
 
             // for each body (with index i): move it according to the total force exerted on it.
             for (int i = 0; i < bodies.length; i++) {
-                Vector3 newPosition = plus(
-                        plus(bodies[i].position,
-                                times(forceOnBody[i], 1 / bodies[i].mass)
-                                // F = m*a -> a = F/m
-                        ),
-                        bodies[i].currentMovement
-                );
-
-                Vector3 newMovement = minus(newPosition, bodies[i].position); // new minus old position.
-
-                bodies[i].position = newPosition;
-                bodies[i].currentMovement = newMovement;
-
+                bodies[i].move(forceOnBody[i]);
             }
 
             // show all movements in StdDraw canvas only every 3 hours (to speed up the simulation)
@@ -135,10 +123,7 @@ public class Simulation {
 
                 // draw new positions
                 for (int i = 0; i < bodies.length; i++) {
-                    StdDraw.setPenColor(bodies[i].color);
-                    StdDraw.filledCircle(bodies[i].position.x, bodies[i].position.y,
-                            1e9 * Math.log10(bodies[i].radius));
-                    // use log10 because of large variation of radii.
+                    bodies[i].draw();
                 }
 
                 // show new positions
@@ -148,8 +133,8 @@ public class Simulation {
         }
 
     }
-
-    //TODO: remove static methods below.
+}
+    /*
 
     // Returns a vector representing the gravitational force exerted by 'b2' on 'b1'.
     public static Vector3 gravitationalForce(CelestialBody b1, CelestialBody b2) {
@@ -219,7 +204,7 @@ public class Simulation {
     }
 
 }
-
+*/
 //TODO: answer additional questions of 'Aufgabenblatt2'.
 
 
