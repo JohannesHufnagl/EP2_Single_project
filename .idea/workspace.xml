@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="revising the comments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="added constructors and initialised the celestialObjects in the main">
       <change beforePath="$PROJECT_DIR$/src/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector3.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,7 +178,7 @@
       <workItem from="1583582454372" duration="10679000" />
       <workItem from="1584020970081" duration="3612000" />
       <workItem from="1584089956354" duration="3999000" />
-      <workItem from="1584114253105" duration="2071000" />
+      <workItem from="1584114253105" duration="3099000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -281,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584091078171</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added constructors and initialised the celestialObjects in the main">
+      <created>1584203013122</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584203013122</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +334,8 @@
     <MESSAGE value="Changed the way of random number generation to Math.random()" />
     <MESSAGE value="Changed the output format of the printPosition() Method, &#10;by using String.format()" />
     <MESSAGE value="revising the comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="revising the comments" />
+    <MESSAGE value="added constructors and initialised the celestialObjects in the main" />
+    <option name="LAST_COMMIT_MESSAGE" value="added constructors and initialised the celestialObjects in the main" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
