@@ -4,7 +4,7 @@ import java.awt.*;
 public class CelestialBody {
 
     // gravitational constant
-    public static final double G = 6.6743e-11;
+    private static final double G = 6.6743e-11;
 
     private String name;
     private double mass;

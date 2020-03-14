@@ -1,10 +1,7 @@
 public class Simulation {
 
-    // gravitational constant
-    public static final double G = 6.6743e-11;
-
     // one astronomical unit (AU) is the average distance of earth to the sun.
-    public static final double AU = 150e9;
+    private static final double AU = 150e9;
 
     // all quantities are based on units of kilogram respectively second and meter.
 
@@ -19,6 +16,22 @@ public class Simulation {
                 new Vector3(0,0,0),
                 StdDraw.YELLOW);
 
+        CelestialBody mercury = new CelestialBody(
+                "Mercury",
+                3.301e23,
+                2.4397e3,
+                new Vector3(-46.0e9, 0, 0),
+                new Vector3(0, -47.87e3, 0),
+                StdDraw.BOOK_RED);
+
+        CelestialBody venus = new CelestialBody(
+                "Venus",
+                4.869e24,
+                6051.5e3,
+                new Vector3(108.16e9, 0, 0),
+                new Vector3(0, 35.02e3, 0),
+                StdDraw.ORANGE);
+
         CelestialBody earth = new CelestialBody(
                 "Earth",
                 5.972e24,
@@ -27,15 +40,23 @@ public class Simulation {
                 new Vector3(0, 29.29e3, 0),
                 StdDraw.BLUE);
 
-        CelestialBody mercury = new CelestialBody(
-                "Mercury",
-                3.301e23,
-                2.4397e3,
-                new Vector3(-46.0e9, 0, 0),
-                new Vector3(0, -47.87e3, 0),
+        CelestialBody moon = new CelestialBody(
+                "Moon",
+                7.349e22,
+                1738e3,
+                new Vector3(384400 + 148e9, 0, 0),
+                new Vector3(0, 1023e3, 0),
+                StdDraw.WHITE);
+
+        CelestialBody mars = new CelestialBody(
+                "Mars",
+                6.419e23,
+                3369e3,
+                new Vector3(227.99e9, 0, 0),
+                new Vector3(0, 24.13e3, 0),
                 StdDraw.RED);
 
-        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury};
+        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars, moon};
         Vector3[] forceOnBody = new Vector3[bodies.length];
 
         StdDraw.setCanvasSize(500, 500);
@@ -74,8 +95,8 @@ public class Simulation {
                 StdDraw.clear(StdDraw.BLACK);
 
                 // draw new positions
-                for (int i = 0; i < bodies.length; i++) {
-                    bodies[i].draw();
+                for (CelestialBody body : bodies) {
+                    body.draw();
                 }
 
                 // show new positions
