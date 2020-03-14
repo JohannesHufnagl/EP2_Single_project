@@ -30,7 +30,7 @@ public class CelestialBody {
 
     // Returns a vector representing the gravitational force exerted by 'body' on this celestial body.
     public Vector3 gravitationalForce(CelestialBody body) {
-        Vector3 direction = this.position.minus(body.position);
+        Vector3 direction = body.position.minus(this.position);
         double r = direction.length();
         direction.normalize();
         double force = G * this.mass * body.mass / (r * r);
