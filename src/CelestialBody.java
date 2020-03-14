@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.lang.ref.SoftReference;
 
 // This class represents celestial bodies like stars, planets, asteroids, etc..
 public class CelestialBody {

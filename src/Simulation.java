@@ -11,8 +11,6 @@ public class Simulation {
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
 
-        //TODO: change implementation of this method according to 'Aufgabenblatt2.md'.
-
         CelestialBody sun = new CelestialBody(
                 "Sol",
                 1.989e30,
@@ -20,21 +18,6 @@ public class Simulation {
                 new Vector3(0,0,0),
                 new Vector3(0,0,0),
                 StdDraw.YELLOW);
-        /*
-        sun.name = "Sol";
-        sun.mass = 1.989e30; // kg
-        sun.radius = 696340e3; // meters
-        sun.position = new Vector3();
-        sun.currentMovement = new Vector3();
-        sun.position.x = 0; // meters
-        sun.position.y = 0;
-        sun.position.z = 0;
-        // sun is the reference point and assumed not to move.
-        sun.currentMovement.x = 0;
-        sun.currentMovement.y = 0;
-        sun.currentMovement.z = 0;
-        sun.color = StdDraw.YELLOW;
-        */
 
         CelestialBody earth = new CelestialBody(
                 "Earth",
@@ -43,21 +26,6 @@ public class Simulation {
                 new Vector3(148e9, 0, 0),
                 new Vector3(0, 29.29e3, 0),
                 StdDraw.BLUE);
-        /*
-        earth.name = "Earth";
-        earth.mass = 5.972e24; // kg
-        earth.radius = 6371e3; // meters
-        earth.position = new Vector3();
-        earth.currentMovement = new Vector3();
-        earth.position.x = 148e9; // minimal distance to sun in meters.
-        earth.position.y = 0;
-        earth.position.z = 0;
-        // viewing from z direction movement is counter-clockwise
-        earth.currentMovement.x = 0;
-        earth.currentMovement.y = 29.29e3; // orbital speed in meters per second (at minimal distance).
-        earth.currentMovement.z = 0;
-        earth.color = StdDraw.BLUE;
-        */
 
         CelestialBody mercury = new CelestialBody(
                 "Mercury",
@@ -66,22 +34,6 @@ public class Simulation {
                 new Vector3(-46.0e9, 0, 0),
                 new Vector3(0, -47.87e3, 0),
                 StdDraw.RED);
-        /*
-        mercury.name = "Mercury";
-        mercury.mass = 3.301e23;
-        mercury.radius = 2.4397e3;
-        mercury.position = new Vector3();
-        mercury.currentMovement = new Vector3();
-        // arbitrary initialisation: position opposite to the earth with maximal distance.
-        mercury.position.x = -46.0e9; // meters
-        mercury.position.y = 0;
-        mercury.position.z = 0;
-        // viewing from z direction movement is counter-clockwise
-        mercury.currentMovement.x = 0;
-        mercury.currentMovement.y = -47.87e3; // meters per second
-        mercury.currentMovement.z = 0;
-        mercury.color = StdDraw.RED;
-         */
 
         CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury};
         Vector3[] forceOnBody = new Vector3[bodies.length];
@@ -134,77 +86,7 @@ public class Simulation {
 
     }
 }
-    /*
 
-    // Returns a vector representing the gravitational force exerted by 'b2' on 'b1'.
-    public static Vector3 gravitationalForce(CelestialBody b1, CelestialBody b2) {
-        Vector3 direction = minus(b2.position, b1.position);
-        double r = length(direction);
-        normalize(direction);
-        double force = G * b1.mass * b2.mass / (r * r);
-        return times(direction, force);
-    }
-
-    // Returns the norm of v1-v2.
-    public static double distance(Vector3 v1, Vector3 v2) {
-        double dX = v1.x - v2.x;
-        double dY = v1.y - v2.y;
-        double dZ = v1.z - v2.z;
-
-        return Math.sqrt(dX * dX + dY * dY + dZ * dZ);
-    }
-
-    // Returns v1+v2.
-    public static Vector3 plus(Vector3 v1, Vector3 v2) {
-
-        Vector3 result = new Vector3();
-        result.x = v1.x + v2.x;
-        result.y = v1.y + v2.y;
-        result.z = v1.z + v2.z;
-
-        return result;
-    }
-
-    // Returns v1-v2.
-    public static Vector3 minus(Vector3 v1, Vector3 v2) {
-
-        Vector3 result = new Vector3();
-        result.x = v1.x - v2.x;
-        result.y = v1.y - v2.y;
-        result.z = v1.z - v2.z;
-
-        return result;
-    }
-
-    // Returns v*d.
-    public static Vector3 times(Vector3 v, double d) {
-
-        Vector3 result = new Vector3();
-        result.x = v.x * d;
-        result.y = v.y * d;
-        result.z = v.z * d;
-
-        return result;
-    }
-
-    // Returns the norm of 'v'.
-    public static double length(Vector3 v) {
-
-        return distance(v, new Vector3()); // distance to origin.
-    }
-
-    // Normalizes the specified vector 'v': changes the length of the vector such that its length
-    // becomes one. The direction and orientation of the vector is not affected.
-    public static void normalize(Vector3 v) {
-
-        double length = length(v);
-        v.x /= length;
-        v.y /= length;
-        v.z /= length;
-    }
-
-}
-*/
 //TODO: answer additional questions of 'Aufgabenblatt2'.
 
 
