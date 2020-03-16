@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Project v0 without comments or TODOs">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,6 +180,7 @@
       <workItem from="1584020970081" duration="3612000" />
       <workItem from="1584089956354" duration="3999000" />
       <workItem from="1584114253105" duration="7621000" />
+      <workItem from="1584359311289" duration="2656000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -308,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584211613914</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage">
+      <created>1584214132896</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1584214132896</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +368,8 @@
     <MESSAGE value="implemented the methods in Vector3" />
     <MESSAGE value="Project is working V0 (old comments are here), next up adding more planets" />
     <MESSAGE value="Project v0 without comments or TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project v0 without comments or TODOs" />
+    <MESSAGE value="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

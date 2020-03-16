@@ -12,8 +12,8 @@ public class Simulation {
                 "Sol",
                 1.989e30,
                 696340e3,
-                new Vector3(0,0,0),
-                new Vector3(0,0,0),
+                new Vector3(0, 0, 0),
+                new Vector3(0, 0, 0),
                 StdDraw.YELLOW);
 
         CelestialBody mercury = new CelestialBody(
@@ -40,13 +40,15 @@ public class Simulation {
                 new Vector3(0, 29.29e3, 0),
                 StdDraw.BLUE);
 
+        /*
         CelestialBody moon = new CelestialBody(
                 "Moon",
                 7.349e22,
-                1738e3,
-                new Vector3(384400 + 148e9, 0, 0),
-                new Vector3(0, 1023e3, 0),
+                1737,
+                new Vector3(AU + 365e6, 0, 0),
+                new Vector3(0,29.29e3 + 1.023e3, 0),
                 StdDraw.WHITE);
+        */
 
         CelestialBody mars = new CelestialBody(
                 "Mars",
@@ -56,7 +58,7 @@ public class Simulation {
                 new Vector3(0, 24.13e3, 0),
                 StdDraw.RED);
 
-        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars, moon};
+        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars};
         Vector3[] forceOnBody = new Vector3[bodies.length];
 
         StdDraw.setCanvasSize(500, 500);
@@ -107,7 +109,25 @@ public class Simulation {
 
     }
 }
+/*
+Beantworten Sie folgende Zusatzfragen als Kommentar in Simulation.java:
+--------------------------------------------------------------------------------------------------
+1. Was versteht man unter Datenkapselung?
 
-//TODO: answer additional questions of 'Aufgabenblatt2'.
+Antwort: Datenkapselung = Zusammenfassen von Methoden und Variablen zu Einheit
+         Als Datenkapselung bezeichnet man in der Programmierung das Verbergen von Daten oder Informationen
+         vor dem Zugriff von außen. Der direkte Zugriff auf die interne Datenstruktur wird unterbunden und
+         erfolgt stattdessen über definierte Schnittstellen (Black-Box-Modell).
 
+--------------------------------------------------------------------------------------------------
+2. Was versteht man unter data hiding?
+
+Antwort: Data-Hiding = Verstecken vor Zugriffen von außen
+         unterschiedliche Sichtbarkeit von Methoden und Variablen
+
+--------------------------------------------------------------------------------------------------
+
+        Datenabstraktion = Datenkapselung + Data-Hiding
+
+ */
 
