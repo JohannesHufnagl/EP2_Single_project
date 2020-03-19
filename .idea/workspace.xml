@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="answered theory question, commented out moon because parameters unclear">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector3.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +34,17 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Simulation.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1TChpwsPjVojiGQM7EY6cLtCiCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -56,18 +64,6 @@
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/angabe" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Simulation">
     <configuration default="true" type="Applet">
@@ -180,7 +176,11 @@
       <workItem from="1584020970081" duration="3612000" />
       <workItem from="1584089956354" duration="3999000" />
       <workItem from="1584114253105" duration="7621000" />
-      <workItem from="1584359311289" duration="2656000" />
+      <workItem from="1584359311289" duration="3172000" />
+      <workItem from="1584362860303" duration="352000" />
+      <workItem from="1584363757261" duration="799000" />
+      <workItem from="1584447770281" duration="4038000" />
+      <workItem from="1584618507826" duration="2559000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -315,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584214132896</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="answered theory question, commented out moon because parameters unclear">
+      <created>1584362159871</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1584362159871</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +376,28 @@
     <MESSAGE value="Project is working V0 (old comments are here), next up adding more planets" />
     <MESSAGE value="Project v0 without comments or TODOs" />
     <MESSAGE value="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage" />
+    <MESSAGE value="answered theory question, commented out moon because parameters unclear" />
+    <option name="LAST_COMMIT_MESSAGE" value="answered theory question, commented out moon because parameters unclear" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1584622535153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584622535153" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1584622535152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584622535152" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1584622535151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584622535151" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1584622535153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584622535153" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

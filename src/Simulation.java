@@ -10,8 +10,8 @@ public class Simulation {
 
         CelestialBody sun = new CelestialBody(
                 "Sol",
-                1.989e30,
-                696340e3,
+                1.9884e30,
+                696342e3,
                 new Vector3(0, 0, 0),
                 new Vector3(0, 0, 0),
                 StdDraw.YELLOW);
@@ -19,36 +19,34 @@ public class Simulation {
         CelestialBody mercury = new CelestialBody(
                 "Mercury",
                 3.301e23,
-                2.4397e3,
-                new Vector3(-46.0e9, 0, 0),
-                new Vector3(0, -47.87e3, 0),
-                StdDraw.BOOK_RED);
+                2439.7e3,
+                new Vector3(-57.909e9, 0, 0),
+                new Vector3(0, -47.36e3, 0),
+                StdDraw.PRINCETON_ORANGE);
 
         CelestialBody venus = new CelestialBody(
                 "Venus",
                 4.869e24,
-                6051.5e3,
+                6051.8e3,
                 new Vector3(108.16e9, 0, 0),
                 new Vector3(0, 35.02e3, 0),
                 StdDraw.ORANGE);
 
         CelestialBody earth = new CelestialBody(
                 "Earth",
-                5.972e24,
-                6371e3,
-                new Vector3(148e9, 0, 0),
-                new Vector3(0, 29.29e3, 0),
+                5.9723e24,
+                6378.16e3,
+                new Vector3(149.6e9, 0, 0),
+                new Vector3(0, 29.78e3, 0),
                 StdDraw.BLUE);
 
-        /*
         CelestialBody moon = new CelestialBody(
                 "Moon",
                 7.349e22,
-                1737,
-                new Vector3(AU + 365e6, 0, 0),
-                new Vector3(0,29.29e3 + 1.023e3, 0),
+                1738e3,
+                new Vector3(149.6e9 + 384400e3, 0, 0),
+                new Vector3(0, 29.78e3 + 1.023e3, 0),
                 StdDraw.WHITE);
-        */
 
         CelestialBody mars = new CelestialBody(
                 "Mars",
@@ -57,8 +55,17 @@ public class Simulation {
                 new Vector3(227.99e9, 0, 0),
                 new Vector3(0, 24.13e3, 0),
                 StdDraw.RED);
+        /*
+        CelestialBody blackHole = new CelestialBody(
+                "Black Hole",
+                1.989e30*800, // 800 solar masses
+                3000,
+                new Vector3(-227.99e9, 1400e8, 0),
+                new Vector3(0, 0, 0),
+                StdDraw.WHITE);
+        */
 
-        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars};
+        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars, moon};
         Vector3[] forceOnBody = new Vector3[bodies.length];
 
         StdDraw.setCanvasSize(500, 500);
