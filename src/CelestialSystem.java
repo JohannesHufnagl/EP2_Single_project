@@ -1,6 +1,7 @@
 public class CelestialSystem {
     /******************************************************
-     class CelestialSystem :
+     class CelestialSystem : CelestialSystem is a linked list,
+     which contains numerous CelestialBody Objects.
 
      public methods :
 
@@ -80,10 +81,10 @@ public class CelestialSystem {
         while (i < pointer) {
             newList[j++] = list[i++];
         }
-        j = pointer += list.length;
-        while (i < list.length) {
-            newList[j++] = list[i++];
-        }
         list = newList;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

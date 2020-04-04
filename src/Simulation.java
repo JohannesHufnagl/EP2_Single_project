@@ -66,6 +66,8 @@ public class Simulation {
         */
 
         CelestialSystem solarsystem = ReadDataUtil.initialize(60);
+        ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
+        universe.add(solarsystem);
 
         // CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars, moon};
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
