@@ -9,7 +9,7 @@ public class ReadDataUtil {
 
         // TODO: implement suitable constructor in class 'CelestialBody' and include block:
         // Parameters: name, mass, radius, position, velocity, color
-        /*
+
         sun = new CelestialBody("Sol", 1.989e30, 696340e3, new Vector3(0,0,0),
                 new Vector3(0,0,0), StdDraw.YELLOW);
 
@@ -24,7 +24,7 @@ public class ReadDataUtil {
 
         mars = new CelestialBody("Mars", 0.641712e24, 3389.5e3, new Vector3(0,0,0),
                 new Vector3(0,0,0), StdDraw.RED);
-        */
+
 
         CelestialBody[] planets = new CelestialBody[] {earth, mercury, venus, mars};
         CelestialSystem solarsystem = ReadDataUtil.readConfiguration("Solarsystem", planets, day);

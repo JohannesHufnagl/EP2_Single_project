@@ -13,6 +13,7 @@ public class CelestialBody {
     private Vector3 currentMovement;
     private Color color; // for drawing the body.
 
+    // Constructor with all parameters of the class CelestialBody
     public CelestialBody(String name, double mass, double radius, Vector3 position, Vector3 currentMovement, Color color) {
         this.name = name;
         this.mass = mass;
@@ -20,6 +21,16 @@ public class CelestialBody {
         this.position = position;
         this.currentMovement = currentMovement;
         this.color = color;
+    }
+
+    // Constructor with parameters(CelestialBody body, Vector3 position, Vector3 velocity)
+    public CelestialBody(CelestialBody body, Vector3 position, Vector3 velocity) {
+        this.name = body.name;
+        this.mass = body.mass;
+        this.radius = body.radius;
+        this.color = body.color;
+        this.position = position;
+        this.currentMovement = velocity;
     }
 
     // Returns the distance between this celestial body and the specified 'body'.
