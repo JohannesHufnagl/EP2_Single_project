@@ -7,7 +7,6 @@ public class ReadDataUtil {
     public static CelestialSystem initialize(int day) {
         CelestialBody sun = null, mercury = null, venus = null, earth = null, mars = null;
 
-        // TODO: implement suitable constructor in class 'CelestialBody' and include block:
         // Parameters: name, mass, radius, position, velocity, color
 
         sun = new CelestialBody("Sol", 1.989e30, 696340e3, new Vector3(0,0,0),
@@ -49,10 +48,6 @@ public class ReadDataUtil {
                 Vector3 velocity = new Vector3(0, 0, 0);
                 Vector3 position = new Vector3(0, 0, 0);
 
-                //TODO: implement getName() in 'CelestialBody'.
-                //TODO: implement missing constructor in class 'CelestialBody'.
-                //TODO: include following block.
-                /*
                 if (fields[0].equals(body.getName()) && Integer.parseInt(fields[2]) == day) {
                     int j = 0;
                     while (velocity.length() < 1e9) {
@@ -79,7 +74,7 @@ public class ReadDataUtil {
                     velocity = velocity.times(1d / (2 * j * 3600 * 24));
                     result.add(new CelestialBody(body, position, velocity));
                 }
-                */
+
             }
         }
 

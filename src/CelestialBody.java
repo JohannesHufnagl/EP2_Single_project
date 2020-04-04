@@ -33,6 +33,11 @@ public class CelestialBody {
         this.currentMovement = velocity;
     }
 
+    // Returns the Name of the CelestialBody Object
+    public String getName() {
+        return this.name;
+    }
+
     // Returns the distance between this celestial body and the specified 'body'.
     public double distanceTo(CelestialBody body) {
         return this.position.distanceTo(body.position);
