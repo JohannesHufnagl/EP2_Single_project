@@ -65,8 +65,16 @@ public class Simulation {
                 StdDraw.WHITE);
         */
 
-        CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars, moon};
-        Vector3[] forceOnBody = new Vector3[bodies.length];
+        CelestialSystem sunsystem = new CelestialSystem("sunsystem");
+        sunsystem.add(sun);
+        sunsystem.add(earth);
+        sunsystem.add(mercury);
+        sunsystem.add(venus);
+        sunsystem.add(mars);
+        sunsystem.add(moon);
+
+        // CelestialBody[] bodies = new CelestialBody[]{earth, sun, mercury, venus, mars, moon};
+        Vector3[] forceOnBody = new Vector3[sunsystem.size()];
 
         StdDraw.setCanvasSize(500, 500);
         StdDraw.setXscale(-2 * AU, 2 * AU);
@@ -83,19 +91,19 @@ public class Simulation {
             seconds++; // each iteration computes the movement of the celestial bodies within one second.
 
             // for each body (with index i): compute the total force exerted on it.
-            for (int i = 0; i < bodies.length; i++) {
+            for (int i = 0; i < sunsystem.size(); i++) {
                 forceOnBody[i] = new Vector3(); // begin with zero
-                for (int j = 0; j < bodies.length; j++) {
+                for (int j = 0; j < sunsystem.size(); j++) {
                     if (i == j) continue;
-                    Vector3 forceToAdd = bodies[i].gravitationalForce(bodies[j]);
+                    Vector3 forceToAdd = sunsystem.get(i).gravitationalForce(sunsystem.get(j));
                     forceOnBody[i] = forceOnBody[i].plus(forceToAdd);
                 }
             }
             // now forceOnBody[i] holds the force vector exerted on body with index i.
 
             // for each body (with index i): move it according to the total force exerted on it.
-            for (int i = 0; i < bodies.length; i++) {
-                bodies[i].move(forceOnBody[i]);
+            for (int i = 0; i < sunsystem.size(); i++) {
+                sunsystem.get(i).move(forceOnBody[i]);
             }
 
             // show all movements in StdDraw canvas only every 3 hours (to speed up the simulation)
@@ -104,8 +112,8 @@ public class Simulation {
                 StdDraw.clear(StdDraw.BLACK);
 
                 // draw new positions
-                for (CelestialBody body : bodies) {
-                    body.draw();
+                for (int i = 0; i < sunsystem.size(); i++) {
+                    sunsystem.get(i).draw();
                 }
 
                 // show new positions
