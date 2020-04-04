@@ -7,54 +7,6 @@ public class Simulation {
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
-
-        CelestialBody sun = new CelestialBody(
-                "Sol",
-                1.9884e30,
-                696342e3,
-                new Vector3(0, 0, 0),
-                new Vector3(0, 0, 0),
-                StdDraw.YELLOW);
-
-        CelestialBody mercury = new CelestialBody(
-                "Mercury",
-                3.301e23,
-                2439.7e3,
-                new Vector3(-57.909e9, 0, 0),
-                new Vector3(0, -47.36e3, 0),
-                StdDraw.PRINCETON_ORANGE);
-
-        CelestialBody venus = new CelestialBody(
-                "Venus",
-                4.869e24,
-                6051.8e3,
-                new Vector3(108.16e9, 0, 0),
-                new Vector3(0, 35.02e3, 0),
-                StdDraw.ORANGE);
-
-        CelestialBody earth = new CelestialBody(
-                "Earth",
-                5.9723e24,
-                6378.16e3,
-                new Vector3(149.6e9, 0, 0),
-                new Vector3(0, 29.78e3, 0),
-                StdDraw.BLUE);
-
-        CelestialBody moon = new CelestialBody(
-                "Moon",
-                7.349e22,
-                1738e3,
-                new Vector3(149.6e9 + 384400e3, 0, 0),
-                new Vector3(0, 29.78e3 + 1.023e3, 0),
-                StdDraw.WHITE);
-
-        CelestialBody mars = new CelestialBody(
-                "Mars",
-                6.419e23,
-                3369e3,
-                new Vector3(227.99e9, 0, 0),
-                new Vector3(0, 24.13e3, 0),
-                StdDraw.RED);
         /*
         CelestialBody blackHole = new CelestialBody(
                 "Black Hole",
