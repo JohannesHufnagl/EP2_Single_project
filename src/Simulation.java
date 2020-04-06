@@ -7,15 +7,6 @@ public class Simulation {
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
-        /*
-        CelestialBody blackHole = new CelestialBody(
-                "Black Hole",
-                1.989e30*800, // 800 solar masses
-                3000,
-                new Vector3(-227.99e9, 1400e8, 0),
-                new Vector3(0, 0, 0),
-                StdDraw.WHITE);
-        */
 
         CelestialSystem solarsystem = ReadDataUtil.initialize(60);
         ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
