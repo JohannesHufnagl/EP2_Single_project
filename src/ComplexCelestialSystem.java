@@ -1,10 +1,14 @@
 public class ComplexCelestialSystem {
 
     //TODO: Define variables.
+    private String name;
+    private int size;
+    private MyComplexCelestialSystemNode head;
 
     // Initializes this system as an empty system with a name.
     public ComplexCelestialSystem(String name) {
         //TODO: implement constructor.
+        this.name = name;
     }
 
     // Adds a subsystem of bodies to this system if there are no bodies in the subsystem
@@ -13,7 +17,19 @@ public class ComplexCelestialSystem {
     // 'false' otherwise.
     public boolean add(CelestialSystem subsystem) {
         //TODO: implement method.
-        return false;
+        if (this.get(subsystem.getName()) == null) {
+            if (head == null) {
+                head = new MyComplexCelestialSystemNode(subsystem, null);
+            } else {
+                MyComplexCelestialSystemNode last = head;
+                while (last.next() != null) {
+                    last = last.next();
+                }
+                last.setNext(new MyComplexCelestialSystemNode(subsystem, null));
+            }
+            size++;
+            return true;
+        } else return false;
     }
 
     // Returns the single body or subsystem with 'name' or 'null' if no such body or subsystem 
@@ -21,13 +37,22 @@ public class ComplexCelestialSystem {
     // one body, with the same name as the body.
     public CelestialSystem get(String name) {
         //TODO: implement method.
+        for (MyComplexCelestialSystemNode n = head; n != null; n = n.next()) {
+            if (name.equals(n.system().getName())) {
+                return n.system();
+            } else if (n.system().get(name) != null && name.equals(n.system().get(name).getName())) {
+                CelestialSystem result = new CelestialSystem(name);
+                result.add(n.system().get(name));
+                return result;
+            }
+        }
         return null;
     }
 
     // Returns the number of bodies of the entire system.
     public int size() {
         //TODO: implement method.
-        return -1;
+        return size;
     }
 
     //TODO: Define additional class(es) implementing a linked list (either here or outside class).
