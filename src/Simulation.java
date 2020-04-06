@@ -10,23 +10,9 @@ public class Simulation {
 
 
         CelestialSystem solarsystem = ReadDataUtil.initialize(60);
-        System.out.println(solarsystem.get(0));
-        System.out.println(solarsystem.get(3));
-        System.out.println(solarsystem.get(2));
-        System.out.println(solarsystem.get(20));
-        System.out.println(solarsystem.get("Mars"));
-        System.out.println(solarsystem.get("Mrs"));
-        System.out.println(solarsystem.size());
 
         ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
-        System.out.println(universe.add(solarsystem));
-        System.out.println(universe.get("Earth"));
-        System.out.println(universe.size());
-        System.out.println(universe.get("Solarsystem"));
-        System.out.println(universe.size());
-        System.out.println(universe.get("Test"));
-        System.out.println(universe.size());
-
+        universe.add(solarsystem);
 
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
 
@@ -78,25 +64,3 @@ public class Simulation {
 
     }
 }
-/*
-Beantworten Sie folgende Zusatzfragen als Kommentar in Simulation.java:
---------------------------------------------------------------------------------------------------
-1. Was versteht man unter Datenkapselung?
-
-Antwort: Datenkapselung = Zusammenfassen von Methoden und Variablen zu Einheit
-         Als Datenkapselung bezeichnet man in der Programmierung das Verbergen von Daten oder Informationen
-         vor dem Zugriff von außen. Der direkte Zugriff auf die interne Datenstruktur wird unterbunden und
-         erfolgt stattdessen über definierte Schnittstellen (Black-Box-Modell).
-
---------------------------------------------------------------------------------------------------
-2. Was versteht man unter data hiding?
-
-Antwort: Data-Hiding = Verstecken vor Zugriffen von außen
-         unterschiedliche Sichtbarkeit von Methoden und Variablen
-
---------------------------------------------------------------------------------------------------
-
-        Datenabstraktion = Datenkapselung + Data-Hiding
-
- */
-

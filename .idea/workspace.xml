@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Finished Version before restart">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Added MyCelestialSystemNode.java and MyComplexCelestialSystemNode.java to VCS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586008530458</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added MyCelestialSystemNode.java and MyComplexCelestialSystemNode.java to VCS">
+      <created>1586195188587</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586195188587</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,31 +393,32 @@
     <MESSAGE value="Added mercury, mars and the earth moon (moon not working yet)&#10;TODO Zusatzfrage" />
     <MESSAGE value="answered theory question, commented out moon because parameters unclear" />
     <MESSAGE value="Started working on Aufgabenblatt3, added constructor to CelestialBody Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started working on Aufgabenblatt3, added constructor to CelestialBody Class" />
+    <MESSAGE value="Added MyCelestialSystemNode.java and MyComplexCelestialSystemNode.java to VCS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MyCelestialSystemNode.java and MyComplexCelestialSystemNode.java to VCS" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586194312529">
+    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586195182860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586194312529" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1586193517140">
+    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586195182860" />
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1586195356957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517140" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1586193517139">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586195356957" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1586195356956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517139" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1586193517139">
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586195356956" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1586195356955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517139" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1586193517140">
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586195356955" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1586195356956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517140" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586195356956" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586193517142">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -426,10 +435,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517142" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586195067367">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586195191637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586195067367" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586195191637" />
     <state x="453" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1586194513384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -444,25 +453,6 @@
     <state x="666" y="148" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586007739322" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulation.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulation.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ComplexCelestialSystem.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="xDraw - barWidth / 2" language="JAVA" />
