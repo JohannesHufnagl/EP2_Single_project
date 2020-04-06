@@ -2,7 +2,7 @@ public class CelestialSystem {
 
     private String name;
     private int size;
-    private MyCelestialSystemNode head;
+    private MyNode head;
 
     // Initialises this system as an empty system with a name.
     public CelestialSystem(String name) {
@@ -18,13 +18,13 @@ public class CelestialSystem {
         //TODO: implement method.
         if (this.get(body.getName()) == null) {
             if (head == null) {
-                head = new MyCelestialSystemNode(body, null);
+                head = new MyNode(body, null);
             } else {
-                MyCelestialSystemNode last = head;
+                MyNode last = head;
                 while (last.next() != null) {
                     last = last.next();
                 }
-                last.setNext(new MyCelestialSystemNode(body, null));
+                last.setNext(new MyNode(body, null));
             }
             size++;
             return true;
@@ -35,7 +35,7 @@ public class CelestialSystem {
     // index 0, the body that was most recently added to the list has the largest index (size()-1).
     public CelestialBody get(int i) {
         //TODO: implement method.
-        for (MyCelestialSystemNode n = head; n != null; n = n.next()) {
+        for (MyNode n = head; n != null; n = n.next()) {
             if (i-- == 0) {
                 return n.body();
             }
@@ -46,7 +46,7 @@ public class CelestialSystem {
     // Returns the body with the specified name or 'null' if no such body exits in the list.
     public CelestialBody get(String name) {
         //TODO: implement method.
-        for (MyCelestialSystemNode n = head; n != null; n = n.next()) {
+        for (MyNode n = head; n != null; n = n.next()) {
             if (name.equals(n.body().getName())) {
                 return n.body();
             }

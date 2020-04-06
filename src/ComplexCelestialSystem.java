@@ -3,7 +3,7 @@ public class ComplexCelestialSystem {
     //TODO: Define variables.
     private String name;
     private int size;
-    private MyComplexCelestialSystemNode head;
+    private MyNode head;
 
     // Initializes this system as an empty system with a name.
     public ComplexCelestialSystem(String name) {
@@ -19,13 +19,13 @@ public class ComplexCelestialSystem {
         //TODO: implement method.
         if (this.get(subsystem.getName()) == null) {
             if (head == null) {
-                head = new MyComplexCelestialSystemNode(subsystem, null);
+                head = new MyNode(subsystem, null);
             } else {
-                MyComplexCelestialSystemNode last = head;
+                MyNode last = head;
                 while (last.next() != null) {
                     last = last.next();
                 }
-                last.setNext(new MyComplexCelestialSystemNode(subsystem, null));
+                last.setNext(new MyNode(subsystem, null));
             }
             size++;
             return true;
@@ -37,7 +37,7 @@ public class ComplexCelestialSystem {
     // one body, with the same name as the body.
     public CelestialSystem get(String name) {
         //TODO: implement method.
-        for (MyComplexCelestialSystemNode n = head; n != null; n = n.next()) {
+        for (MyNode n = head; n != null; n = n.next()) {
             if (name.equals(n.system().getName())) {
                 return n.system();
             } else if (n.system().get(name) != null && name.equals(n.system().get(name).getName())) {
