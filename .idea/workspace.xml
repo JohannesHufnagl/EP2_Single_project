@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Finished Version before restart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComplexCelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexCelestialSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +25,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="3b8ff3487e8ac979ccb819ecad7c8fc423123130" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Simulation.java" root0="FORCE_HIGHLIGHTING" />
@@ -392,10 +390,10 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586008525037">
+    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586194312529">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586008525037" />
+    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586194312529" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1586193517140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -428,10 +426,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517142" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586008533386">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586195067367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586008533386" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586195067367" />
+    <state x="453" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1586194513384">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="453" y="254" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586194513384" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586194623806">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586194623806" />
     <state x="666" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1586007739322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
