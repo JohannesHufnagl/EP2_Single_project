@@ -1,6 +1,7 @@
 public class CelestialSystemIndex {
 
     //TODO: Define variables and constructor.
+    private MyTreeNode root;
 
     // Adds a system of bodies to the tree. Since the keys of the tree are the names of bodies,
     // adding a system adds multiple (key, value) pairs to the tree, one for each body of the
@@ -13,8 +14,16 @@ public class CelestialSystemIndex {
     // 'false' otherwise.
     public boolean add(CelestialSystem system) {
         //TODO: implement method.
-        return false;
-
+        for (int i = 0; i < system.size(); i++) {
+            if (root.find(system.get(i).getName()) != null) {
+                return false;
+            }
+        }
+        String value = system.getName();
+        for (int i = 0; i < system.size(); i++) {
+            root.put(system.get(i).getName(), value);
+        }
+        return true;
     }
 
     // Returns the celestial system in which a body with the specified name exists.
@@ -24,7 +33,6 @@ public class CelestialSystemIndex {
     public CelestialSystem get(String name) {
         //TODO: implement method.
         return null;
-
     }
 
     // Returns the overall number of bodies indexed by the tree.

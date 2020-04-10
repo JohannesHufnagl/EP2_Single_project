@@ -33,4 +33,8 @@ public class MyNode {
         this.body = body;
     }
 
+    public String toString() {
+        return body != null ? this.body.toString() : this.system.toString();
+    }
+
 }

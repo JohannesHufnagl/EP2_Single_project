@@ -57,5 +57,3 @@ public class ComplexCelestialSystem {
 
     //TODO: Define additional class(es) implementing a linked list (either here or outside class).
 }
-
-

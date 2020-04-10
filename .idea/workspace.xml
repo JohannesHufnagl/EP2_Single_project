@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="submission 3 V0">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists">
+      <change afterPath="$PROJECT_DIR$/src/MyDLNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CelestialBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComplexCelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexCelestialSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyCelestialSystemNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyComplexCelestialSystemNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadDataUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +189,9 @@
       <workItem from="1584447770281" duration="4038000" />
       <workItem from="1584618507826" duration="2559000" />
       <workItem from="1586007485154" duration="1270000" />
+      <workItem from="1586368511759" duration="293000" />
+      <workItem from="1586369398539" duration="3452000" />
+      <workItem from="1586530362201" duration="5886000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -347,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586195643289</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists">
+      <created>1586198099470</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586198099470</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,65 +419,85 @@
     <MESSAGE value="Started working on Aufgabenblatt3, added constructor to CelestialBody Class" />
     <MESSAGE value="Added MyCelestialSystemNode.java and MyComplexCelestialSystemNode.java to VCS" />
     <MESSAGE value="submission 3 V0" />
-    <option name="LAST_COMMIT_MESSAGE" value="submission 3 V0" />
+    <MESSAGE value="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists" />
+    <option name="LAST_COMMIT_MESSAGE" value="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586195640322">
+    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586198095790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586195640322" />
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1586198005245">
+    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586198095790" />
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom" timestamp="1586533618720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586198005245" />
-    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1586198005244">
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618720" />
+    <state width="1877" height="272" key="GridCell.Tab.0.center" timestamp="1586533618719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586198005244" />
-    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1586198005243">
+    <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618719" />
+    <state width="1877" height="272" key="GridCell.Tab.0.left" timestamp="1586533618719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586198005243" />
-    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1586198005244">
+    <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618719" />
+    <state width="1877" height="272" key="GridCell.Tab.0.right" timestamp="1586533618719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586198005244" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586193517142">
+    <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618719" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586533567282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517142" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1586193517141">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567282" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1586533567282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517141" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1586193517141">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567282" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1586533567281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517141" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1586193517142">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567281" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1586533567282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586193517142" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586195649070">
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567282" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586198105390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586195649070" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586198105390" />
     <state x="453" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1586194513384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="453" y="254" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586194513384" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586194623806">
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586255956147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586194623806" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586255956147" />
     <state x="666" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1586007739322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="148" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586007739322" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CelestialSystem.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Simulation.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Simulation.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="xDraw - barWidth / 2" language="JAVA" />

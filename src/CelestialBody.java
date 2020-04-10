@@ -35,7 +35,7 @@ public class CelestialBody {
 
     // Returns the Name of the CelestialBody Object
     public String getName() {
-        return this.name;
+        return name;
     }
 
     // Returns the distance between this celestial body and the specified 'body'.
