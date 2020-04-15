@@ -2,6 +2,7 @@ public class CelestialSystemIndex {
 
     //TODO: Define variables and constructor.
     private MyTreeNode root;
+    private int numberOfSystems;
 
     public CelestialSystemIndex() {
     }
@@ -25,14 +26,14 @@ public class CelestialSystemIndex {
                 return false;
         }
         // iterates through the system and adds (put) new nodes to the tree
-        int index = 0;
-        while (index < system.size()) {
+        for (int i = 0; i < system.size(); i++) {
             if (root == null) {
-                root = new MyTreeNode(system.get(index).getName(), system);
+                root = new MyTreeNode(system.get(0).getName(), system);
+                i++;
             }
-            root.put(system.get(index).getName(), system);
-            index++;
+            root.put(system.get(i).getName(), system);
         }
+        numberOfSystems++;
         return true;
     }
 
@@ -60,12 +61,7 @@ public class CelestialSystemIndex {
     // Returns the overall number of systems indexed by the tree.
     public int numberOfSystems() {
         //TODO: implement method.
-        return -1;
-
+        return numberOfSystems;
     }
-
     //TODO: Define additional class(es) implementing a binary tree (either here or outside class).
-
 }
-
-

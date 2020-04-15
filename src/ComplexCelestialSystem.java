@@ -1,13 +1,11 @@
 public class ComplexCelestialSystem {
 
-    //TODO: Define variables.
     private String name;
     private int size;
     private MyNode head;
 
     // Initializes this system as an empty system with a name.
     public ComplexCelestialSystem(String name) {
-        //TODO: implement constructor.
         this.name = name;
     }
 
@@ -16,7 +14,6 @@ public class ComplexCelestialSystem {
     // The method returns 'true' if the collection was changed as a result of the call and
     // 'false' otherwise.
     public boolean add(CelestialSystem subsystem) {
-        //TODO: implement method.
         if (this.get(subsystem.getName()) == null) {
             if (head == null) {
                 head = new MyNode(subsystem, null);
@@ -36,7 +33,6 @@ public class ComplexCelestialSystem {
     // exists in this system. In case of a single body, the body is returned as a subsystem of 
     // one body, with the same name as the body.
     public CelestialSystem get(String name) {
-        //TODO: implement method.
         for (MyNode n = head; n != null; n = n.next()) {
             if (name.equals(n.system().getName())) {
                 return n.system();
@@ -51,9 +47,11 @@ public class ComplexCelestialSystem {
 
     // Returns the number of bodies of the entire system.
     public int size() {
-        //TODO: implement method.
-        return size;
+        int count = 0;
+        for (MyNode n = head; n != null; n = n.next()) {
+            count++;
+        }
+        return count;
     }
-
     //TODO: Define additional class(es) implementing a linked list (either here or outside class).
 }

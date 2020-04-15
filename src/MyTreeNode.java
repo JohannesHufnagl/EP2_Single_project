@@ -64,25 +64,30 @@ public class MyTreeNode {
         return systemName;
     }
 
-    public MyTreeNode getLeft() {
-        return left;
-    }
-
-    public MyTreeNode getRight() {
-        return right;
-    }
-
     public int countNodes() {
         int c = 1;
         if (right != null) c += right.countNodes();
         if (left != null) c += left.countNodes();
         return c;
-
     }
 
     public int countSystems() {
         int c = 1;
-        return -1;
+        if (left != null) {
+            if (systemName != left.systemName) {
+                c++;
+            }
+            left.countSystems();
+        }
+
+        if (right != null) {
+            if (systemName != right.systemName) {
+                c++;
+            }
+            right.countSystems();
+        }
+
+        return c;
     }
 
 }
