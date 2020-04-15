@@ -27,7 +27,7 @@ public class ReadDataUtil {
 
         CelestialBody[] planets = new CelestialBody[] {earth, mercury, venus, mars};
         CelestialSystem solarsystem = ReadDataUtil.readConfiguration("Solarsystem", planets, day);
-        //solarsystem.add(sun);
+        solarsystem.add(sun);
         return solarsystem;
     }
 

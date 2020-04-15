@@ -7,19 +7,12 @@ public class Simulation {
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
-        CelestialBody sun = new CelestialBody("Sol", 1.989e30, 696340e3, new Vector3(0, 0, 0),
-                new Vector3(0, 0, 0), StdDraw.YELLOW);
 
-        CelestialSystem solarsystem = ReadDataUtil.initialize(160);
-        System.out.println(solarsystem.toString());
+        CelestialSystem solarsystem = ReadDataUtil.initialize(60);
 
         ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
         universe.add(solarsystem);
-
-        solarsystem.add(2, sun);
         System.out.println(solarsystem.toString());
-
-        System.out.println(solarsystem.reverse().toString());
 
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
 

@@ -16,19 +16,16 @@ public class CelestialSystem {
     // returns 'true' if the list was changed as a result of the call and 'false' otherwise.
     public boolean add(CelestialBody body) {
         //TODO: implement method.
-        if (this.get(body.getName()) == null) {
-            if (head == null) {
-                head = tail = new MyDLNode(body, null, null);
-            } else {
-                MyDLNode last = head;
-                while (last.next() != null) {
-                    last = last.next();
-                }
-                last.setNext(tail = new MyDLNode(body, last, null));
+        if (head == null) {
+            head = tail = new MyDLNode(body, null, null);
+        } else {
+            if (get(body.getName()) != null) {
+                return false;
             }
-            size++;
-            return true;
-        } else return false;
+            tail.setNext(tail = new MyDLNode(body, tail, null));
+        }
+        size++;
+        return true;
     }
 
     // Returns the 'body' with the index 'i'. The body that was first added to the list has the
@@ -78,10 +75,23 @@ public class CelestialSystem {
     public boolean add(int i, CelestialBody body) {
         //TODO: implement method.
         if (this.size() >= i && this.get(body.getName()) == null) {
-            for (MyDLNode n = head; n != null; n = n.next(), --i) {
-                if (i - 1 == 0) {
-                    n.setNext(new MyDLNode(body, n, n.next()));
-                    n.next().next().setPrev(n.next());
+            if (i > 0) {
+                for (MyDLNode n = head; n != null; n = n.next(), --i) {
+                    if (i - 1 == 0) {
+                        n.setNext(new MyDLNode(body, n, n.next()));
+                        if (tail == n) {
+                            tail = n.next();
+                        } else {
+                            n.next().next().setPrev(n.next());
+                        }
+                    }
+                }
+            } else if (i == 0) {
+                head = new MyDLNode(body, null, head);
+                if (tail == null) {
+                    tail = head;
+                } else {
+                    head.next().setPrev(head);
                 }
             }
             size++;
@@ -114,5 +124,4 @@ public class CelestialSystem {
         }
         return result;
     }
-
 }

@@ -1,44 +1,48 @@
 public class MyTreeNode {
-    private String key, value;
+    private String bodyName;
+    private CelestialSystem systemName;
     private MyTreeNode left, right;
 
-    public MyTreeNode(String k, String v) {
-        key = k;
-        value = v;
+    public MyTreeNode(String b, CelestialSystem s) {
+        bodyName = b;
+        systemName = s;
     }
 
-    private int compare(String k) {
-        if (k == null) {
-            return key == null ? 0 : -1;
+    // x.compare(y) -> -1 if x < y
+    //                  0 if x == y
+    //                  1 if x > y
+    private int compare(String b) {
+        if (b == null) {
+            return bodyName == null ? 0 : -1;
         }
-        if (key == null) {
+        if (bodyName == null) {
             return 1;
         }
-        return k.compareTo(key);
+        return b.compareTo(bodyName);
     }
 
-    public String put(String k, String v) {
-        int cmp = compare(k);
+    public CelestialSystem put(String b, CelestialSystem s) {
+        int cmp = compare(b);
         if (cmp < 0) {
             if (left != null) {
-                return left.put(k, v);
+                return left.put(b, s);
             }
-            left = new MyTreeNode(k, v);
+            left = new MyTreeNode(b, s);
         } else if (cmp > 0) {
             if (right != null) {
-                return right.put(k, v);
+                return right.put(b, s);
             }
-            right = new MyTreeNode(k, v);
+            right = new MyTreeNode(b, s);
         } else {
-            String result = value;
-            value = v;
+            CelestialSystem result = systemName;
+            systemName = s;
             return result;
         }
         return null;
     }
 
-    public MyTreeNode find(String k) {
-        int cmp = compare(k);
+    public MyTreeNode find(String b) {
+        int cmp = compare(b);
         if (cmp == 0) {
             return this;
         }
@@ -46,18 +50,39 @@ public class MyTreeNode {
         if (node == null) {
             return null;
         }
-        return node.find(k);
+        return node.find(b);
     }
 
-    public boolean hasValue(String v) {
-        return (v == null ? value == v
-                : v.equals(value)) ||
-                (left != null && left.hasValue(v)) ||
-                (right != null && right.hasValue(v));
+    public boolean sameSystem(CelestialSystem s) {
+        return (s == null ? systemName == s
+                : s.equals(systemName)) ||
+                (left != null && left.sameSystem(s)) ||
+                (right != null && right.sameSystem(s));
     }
 
-    public String value() {
-        return value;
+    public CelestialSystem systemName() {
+        return systemName;
+    }
+
+    public MyTreeNode getLeft() {
+        return left;
+    }
+
+    public MyTreeNode getRight() {
+        return right;
+    }
+
+    public int countNodes() {
+        int c = 1;
+        if (right != null) c += right.countNodes();
+        if (left != null) c += left.countNodes();
+        return c;
+
+    }
+
+    public int countSystems() {
+        int c = 1;
+        return -1;
     }
 
 }

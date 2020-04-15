@@ -3,6 +3,9 @@ public class CelestialSystemIndex {
     //TODO: Define variables and constructor.
     private MyTreeNode root;
 
+    public CelestialSystemIndex() {
+    }
+
     // Adds a system of bodies to the tree. Since the keys of the tree are the names of bodies,
     // adding a system adds multiple (key, value) pairs to the tree, one for each body of the
     // system, with the same value, i.e., reference to the celestial system.
@@ -14,14 +17,21 @@ public class CelestialSystemIndex {
     // 'false' otherwise.
     public boolean add(CelestialSystem system) {
         //TODO: implement method.
+
+        // checks if the tree is empty and searches if there are names in the tree,
+        // which are equal to the names of a body in the CelestialSystem, if so, null is returned.
         for (int i = 0; i < system.size(); i++) {
-            if (root.find(system.get(i).getName()) != null) {
+            if (root != null && root.find(system.get(i).getName()) != null)
                 return false;
-            }
         }
-        String value = system.getName();
-        for (int i = 0; i < system.size(); i++) {
-            root.put(system.get(i).getName(), value);
+        // iterates through the system and adds (put) new nodes to the tree
+        int index = 0;
+        while (index < system.size()) {
+            if (root == null) {
+                root = new MyTreeNode(system.get(index).getName(), system);
+            }
+            root.put(system.get(index).getName(), system);
+            index++;
         }
         return true;
     }
@@ -32,14 +42,19 @@ public class CelestialSystemIndex {
     // If no such system is found, 'null' is returned.
     public CelestialSystem get(String name) {
         //TODO: implement method.
-        return null;
+        if (root == null) {
+            return null;
+        }
+        MyTreeNode node = root.find(name);
+        return node == null ? null : node.systemName();
     }
 
     // Returns the overall number of bodies indexed by the tree.
     public int numberOfBodies() {
         //TODO: implement method.
-        return -1;
-
+        if (root != null) {
+            return root.countNodes();
+        } else return 0;
     }
 
     // Returns the overall number of systems indexed by the tree.

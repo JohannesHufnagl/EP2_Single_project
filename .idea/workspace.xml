@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists">
-      <change afterPath="$PROJECT_DIR$/src/MyDLNode.java" afterDir="false" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Started working on submission 4, added double linked list via the MyDLNode.java and added a associative Tree Node class MyTreeNode.java which is not finished yet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComplexCelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexCelestialSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReadDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadDataUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
@@ -58,7 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555618944995" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../AlgoDat_186.866 Algorithmen und Datenstrukturen/04_Programmieraufgaben/Programm1/P1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.116027534" />
@@ -191,7 +188,12 @@
       <workItem from="1586007485154" duration="1270000" />
       <workItem from="1586368511759" duration="293000" />
       <workItem from="1586369398539" duration="3452000" />
-      <workItem from="1586530362201" duration="5886000" />
+      <workItem from="1586530362201" duration="6765000" />
+      <workItem from="1586543170435" duration="9111000" />
+      <workItem from="1586607637938" duration="1965000" />
+      <workItem from="1586633952077" duration="3505000" />
+      <workItem from="1586850455979" duration="1838000" />
+      <workItem from="1586970266992" duration="3521000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -361,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586198099470</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Started working on submission 4, added double linked list via the MyDLNode.java and added a associative Tree Node class MyTreeNode.java which is not finished yet.">
+      <created>1586536732005</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586536732005</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,47 +429,60 @@
     <MESSAGE value="Added MyCelestialSystemNode.java and MyComplexCelestialSystemNode.java to VCS" />
     <MESSAGE value="submission 3 V0" />
     <MESSAGE value="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="submission 3 V1, changed the node classes to only one node class with two constructors for the two different lists" />
+    <MESSAGE value="Started working on submission 4, added double linked list via the MyDLNode.java and added a associative Tree Node class MyTreeNode.java which is not finished yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started working on submission 4, added double linked list via the MyDLNode.java and added a associative Tree Node class MyTreeNode.java which is not finished yet." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586198095790">
+    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1586536727663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586198095790" />
-    <state width="1877" height="272" key="GridCell.Tab.0.bottom" timestamp="1586533618720">
+    <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586536727663" />
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1586870766797">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586870766797" />
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom" timestamp="1586973871665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618720" />
-    <state width="1877" height="272" key="GridCell.Tab.0.center" timestamp="1586533618719">
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586973871665" />
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
+    <state width="1877" height="272" key="GridCell.Tab.0.center" timestamp="1586973871664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618719" />
-    <state width="1877" height="272" key="GridCell.Tab.0.left" timestamp="1586533618719">
+    <state width="1877" height="272" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586973871664" />
+    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431478" />
+    <state width="1877" height="272" key="GridCell.Tab.0.left" timestamp="1586973871661">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618719" />
-    <state width="1877" height="272" key="GridCell.Tab.0.right" timestamp="1586533618719">
+    <state width="1877" height="272" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586973871661" />
+    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431477" />
+    <state width="1877" height="272" key="GridCell.Tab.0.right" timestamp="1586973871664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586533618719" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586533567282">
+    <state width="1877" height="272" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586973871664" />
+    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431478" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1586636900936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567282" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1586533567282">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586636900936" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431480" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1586636900935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567282" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1586533567281">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586636900935" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1586636900934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567281" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1586533567282">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586636900934" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1586636900936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586533567282" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586636900936" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586198105390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -479,25 +501,6 @@
     <state x="666" y="148" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586007739322" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CelestialSystem.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulation.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Simulation.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="xDraw - barWidth / 2" language="JAVA" />
