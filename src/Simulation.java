@@ -7,6 +7,7 @@ public class Simulation {
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
+
         CelestialSystem solarsystem = ReadDataUtil.initialize(60);
         ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
         universe.add(solarsystem);

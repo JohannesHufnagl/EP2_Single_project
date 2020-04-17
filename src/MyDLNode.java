@@ -8,11 +8,6 @@ public class MyDLNode {
         this.next = next;
     }
 
-    public MyDLNode(CelestialBody body) {
-        this.body = body;
-        prev = next = this;
-    }
-
     public CelestialBody body() {
         return body;
     }
@@ -37,7 +32,4 @@ public class MyDLNode {
         this.body = body;
     }
 
-    public String toString() {
-        return this.body.toString();
-    }
 }

@@ -1,11 +1,7 @@
 public class CelestialSystemIndex {
 
-    //TODO: Define variables and constructor.
     private MyTreeNode root;
-    private int numberOfSystems;
 
-    public CelestialSystemIndex() {
-    }
 
     // Adds a system of bodies to the tree. Since the keys of the tree are the names of bodies,
     // adding a system adds multiple (key, value) pairs to the tree, one for each body of the
@@ -17,8 +13,6 @@ public class CelestialSystemIndex {
     // The method returns 'true' if the tree was changed as a result of the call and
     // 'false' otherwise.
     public boolean add(CelestialSystem system) {
-        //TODO: implement method.
-
         // checks if the tree is empty and searches if there are names in the tree,
         // which are equal to the names of a body in the CelestialSystem, if so, null is returned.
         for (int i = 0; i < system.size(); i++) {
@@ -33,7 +27,7 @@ public class CelestialSystemIndex {
             }
             root.put(system.get(i).getName(), system);
         }
-        numberOfSystems++;
+
         return true;
     }
 
@@ -42,7 +36,6 @@ public class CelestialSystemIndex {
     // Europa, Ganymed, Kallisto) will be returned.
     // If no such system is found, 'null' is returned.
     public CelestialSystem get(String name) {
-        //TODO: implement method.
         if (root == null) {
             return null;
         }
@@ -52,7 +45,6 @@ public class CelestialSystemIndex {
 
     // Returns the overall number of bodies indexed by the tree.
     public int numberOfBodies() {
-        //TODO: implement method.
         if (root != null) {
             return root.countNodes();
         } else return 0;
@@ -60,8 +52,20 @@ public class CelestialSystemIndex {
 
     // Returns the overall number of systems indexed by the tree.
     public int numberOfSystems() {
-        //TODO: implement method.
-        return numberOfSystems;
+        if (root != null) {
+            return root.countSystems();
+        } else return 0;
     }
-    //TODO: Define additional class(es) implementing a binary tree (either here or outside class).
 }
+/*
+ Zusatzfragen:
+ Wie müsste man die Methoden von CelestialSystemIndex ändern, wenn man
+ im Baum nicht nur mit Namen von Himmelskörpern, sondern auch mit
+ Namen von System suchen will?
+
+Mittels einer neu überladenen get Methode, welche als Parameter den Systemnamen besitzt könnte man im Baum irgendeinen
+Knoten finden der dieses System als value hat. Mit dem Namen dieses Knoten s könnte man wieder
+die alte get(String name) Methode verwenden. Falls das System nicht im Baum enthalten ist, wird null retourniert.
+
+
+ */

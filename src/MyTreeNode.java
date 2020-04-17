@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class MyTreeNode {
     private String bodyName;
     private CelestialSystem systemName;
@@ -53,12 +55,6 @@ public class MyTreeNode {
         return node.find(b);
     }
 
-    public boolean sameSystem(CelestialSystem s) {
-        return (s == null ? systemName == s
-                : s.equals(systemName)) ||
-                (left != null && left.sameSystem(s)) ||
-                (right != null && right.sameSystem(s));
-    }
 
     public CelestialSystem systemName() {
         return systemName;
@@ -72,22 +68,17 @@ public class MyTreeNode {
     }
 
     public int countSystems() {
-        int c = 1;
+        HashSet<MyTreeNode> hashSet = new HashSet<>();
+
         if (left != null) {
-            if (systemName != left.systemName) {
-                c++;
-            }
+            hashSet.add(left);
             left.countSystems();
         }
-
         if (right != null) {
-            if (systemName != right.systemName) {
-                c++;
-            }
+            hashSet.add(right);
             right.countSystems();
         }
-
-        return c;
+        return hashSet.size();
     }
 
 }

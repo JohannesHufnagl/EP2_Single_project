@@ -1,7 +1,6 @@
 public class ComplexCelestialSystem {
 
     private String name;
-    private int size;
     private MyNode head;
 
     // Initializes this system as an empty system with a name.
@@ -24,7 +23,6 @@ public class ComplexCelestialSystem {
                 }
                 last.setNext(new MyNode(subsystem, null));
             }
-            size++;
             return true;
         } else return false;
     }
@@ -53,5 +51,4 @@ public class ComplexCelestialSystem {
         }
         return count;
     }
-    //TODO: Define additional class(es) implementing a linked list (either here or outside class).
 }
