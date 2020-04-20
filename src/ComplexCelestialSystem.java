@@ -47,7 +47,7 @@ public class ComplexCelestialSystem {
     public int size() {
         int count = 0;
         for (MyNode n = head; n != null; n = n.next()) {
-            count++;
+            count += n.system().size();
         }
         return count;
     }
