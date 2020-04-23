@@ -2,7 +2,6 @@ public class CelestialSystemIndex {
 
     private MyTreeNode root;
 
-
     // Adds a system of bodies to the tree. Since the keys of the tree are the names of bodies,
     // adding a system adds multiple (key, value) pairs to the tree, one for each body of the
     // system, with the same value, i.e., reference to the celestial system.
@@ -58,14 +57,15 @@ public class CelestialSystemIndex {
     }
 }
 /*
- Zusatzfragen:
+ Zusatzfrage:
  Wie müsste man die Methoden von CelestialSystemIndex ändern, wenn man
  im Baum nicht nur mit Namen von Himmelskörpern, sondern auch mit
  Namen von System suchen will?
 
-Mittels einer neu überladenen get Methode, welche als Parameter den Systemnamen besitzt könnte man im Baum irgendeinen
-Knoten finden der dieses System als value hat. Mit dem Namen dieses Knoten s könnte man wieder
-die alte get(String name) Methode verwenden. Falls das System nicht im Baum enthalten ist, wird null retourniert.
-
-
+ Der binäre Suchbaum ist lexikographisch nach den Namen der bodys sortiert. Um den Baum nun zu traversieren damit man
+ auch mit Namen von Systemen suchen kann, könnte der Baum mit einer inorder() Methode durchgegangen werden, dass ist
+ möglich, da der Baum lexikographisch sortiert ist. Dabei werden alle Knoten in aufsteigender Reihenfolge durchgegangen.
+ Findet man einen Knoten mit dem gesuchten System, kann das System ausgegeben werden und die Suche muss nicht weiter
+ fortgesetzt werden.
+ Falls das System nicht im Baum enthalten ist, wird null retourniert.
  */
