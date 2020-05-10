@@ -115,4 +115,28 @@ public class CelestialSystem {
         }
         return result;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CelestialSystem that = (CelestialSystem) o;
+        if (size() != that.size()) return false;
+        int counter = 0;
+        for (MyDLNode n = head; n != null; n = n.next()) {
+            if (n.body().equals(that.get(n.body().getName()))) {
+                counter++;
+            }
+        }
+        return counter == size();
+    }
+
+    @Override
+    public int hashCode() {
+        int h = 7654321;
+        for (MyDLNode n = head; n != null; n = n.next()) {
+            h += n.body().hashCode();
+        }
+        return h;
+    }
 }

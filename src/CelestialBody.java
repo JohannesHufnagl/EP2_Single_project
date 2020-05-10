@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Objects;
 
 // This class represents celestial bodies like stars, planets, asteroids, etc..
 public class CelestialBody {
@@ -80,9 +81,21 @@ public class CelestialBody {
     // The radius of the dot is in relation to the radius of the celestial body
     // (use a conversion based on the logarithm as in 'Simulation.java').
     public void draw() {
-        this.position.drawAsDot(1e9*Math.log10(this.radius), this.color);
+        this.position.drawAsDot(1e9 * Math.log10(this.radius), this.color);
         // use log10 because of large variation of radii.
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CelestialBody that = (CelestialBody) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
 

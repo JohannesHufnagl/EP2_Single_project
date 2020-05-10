@@ -1,13 +1,13 @@
 import java.util.HashSet;
 
 public class MyTreeNode {
-    private String bodyName;
-    private CelestialSystem systemName;
+    private String key;
+    private CelestialSystem value;
     private MyTreeNode left, right;
 
     public MyTreeNode(String b, CelestialSystem s) {
-        bodyName = b;
-        systemName = s;
+        key = b;
+        value = s;
     }
 
     // x.compare(y) -> -1 if x < y
@@ -15,12 +15,12 @@ public class MyTreeNode {
     //                  1 if x > y
     private int compare(String b) {
         if (b == null) {
-            return bodyName == null ? 0 : -1;
+            return key == null ? 0 : -1;
         }
-        if (bodyName == null) {
+        if (key == null) {
             return 1;
         }
-        return b.compareTo(bodyName);
+        return b.compareTo(key);
     }
 
     public CelestialSystem put(String b, CelestialSystem s) {
@@ -36,8 +36,8 @@ public class MyTreeNode {
             }
             right = new MyTreeNode(b, s);
         } else {
-            CelestialSystem result = systemName;
-            systemName = s;
+            CelestialSystem result = value;
+            value = s;
             return result;
         }
         return null;
@@ -57,7 +57,7 @@ public class MyTreeNode {
 
 
     public CelestialSystem systemName() {
-        return systemName;
+        return value;
     }
 
     public int countNodes() {
@@ -67,18 +67,16 @@ public class MyTreeNode {
         return c;
     }
 
-    public int countSystems() {
-        HashSet<MyTreeNode> hashSet = new HashSet<>();
-
+    public int countSystems(HashSet<CelestialSystem> h) {
         if (left != null) {
-            hashSet.add(left);
-            left.countSystems();
+            h.add(left.systemName());
+            left.countSystems(h);
         }
         if (right != null) {
-            hashSet.add(right);
-            right.countSystems();
+            h.add(right.systemName());
+            right.countSystems(h);
         }
-        return hashSet.size();
+        return h.size();
     }
 
 }

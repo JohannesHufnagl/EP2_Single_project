@@ -12,6 +12,21 @@ public class Simulation {
         ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
         universe.add(solarsystem);
 
+        CelestialSystem solarsystem2 = ReadDataUtil.initialize(40);
+
+        CelestialSystem otherSystem = new CelestialSystem("emtpy system");
+        otherSystem.add(new CelestialBody("Earth", 1, 1, new Vector3(1, 1, 1), new Vector3(1, 1, 1), StdDraw.BLACK));
+
+        System.out.println(solarsystem.equals(solarsystem)); // true
+        System.out.println(solarsystem.equals(solarsystem2)); // true
+        System.out.println(solarsystem.equals(otherSystem)); // false
+
+        CelestialSystemIndexMap hashmap = new CelestialSystemIndexMap();
+
+        System.out.println(hashmap.add(solarsystem));
+        System.out.println(hashmap.add(solarsystem2));
+        System.out.println(hashmap.add(otherSystem));
+
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
 
         StdDraw.setCanvasSize(500, 500);
