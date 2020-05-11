@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="changed the ComplexCelestialSystem.java method size() to the right solution">
-      <change afterPath="$PROJECT_DIR$/src/CelestialSystemIndexTree.java" afterDir="false" />
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Overwritten equals and hashCode in CelestialBody.java and CelestialSystem.java,&#10;Refactored the CelestialSystemIndex.java class to CelestialSystemIndexTree.java and&#10;defined the CelestialSystemIndex interface, which will be implemented in the&#10;CelestialSystemIndexMap.java class.&#10;&#10;CelestialSystemIndexMap.java is not working, it doesn't check the bodies in the systems&#10;which get added for duplicates.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTreeNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +58,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555618944995" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../03_Teamaufgabe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.116027534" />
@@ -211,7 +206,9 @@
       <workItem from="1588940327303" duration="3977000" />
       <workItem from="1588979112767" duration="596000" />
       <workItem from="1589007328701" duration="1926000" />
-      <workItem from="1589106512030" duration="3561000" />
+      <workItem from="1589106512030" duration="4605000" />
+      <workItem from="1589134160438" duration="9560000" />
+      <workItem from="1589180578017" duration="1639000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -416,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587389184029</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Overwritten equals and hashCode in CelestialBody.java and CelestialSystem.java,&#10;Refactored the CelestialSystemIndex.java class to CelestialSystemIndexTree.java and&#10;defined the CelestialSystemIndex interface, which will be implemented in the&#10;CelestialSystemIndexMap.java class.&#10;&#10;CelestialSystemIndexMap.java is not working, it doesn't check the bodies in the systems&#10;which get added for duplicates.">
+      <created>1589110525890</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1589110525890</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +455,6 @@
       <path value="$PROJECT_DIR$/../.." />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="added fallToGround method" />
     <MESSAGE value="added the test cases, they are not working right now" />
     <MESSAGE value="featherSimulation is working and all instances are implemented but not&#10;polished" />
     <MESSAGE value="Started commenting Body()" />
@@ -476,73 +479,76 @@
     <MESSAGE value="finished submission 3 and changed methods in submission 4" />
     <MESSAGE value="final changes, added HashSet in countSystems method" />
     <MESSAGE value="changed the ComplexCelestialSystem.java method size() to the right solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the ComplexCelestialSystem.java method size() to the right solution" />
+    <MESSAGE value="Overwritten equals and hashCode in CelestialBody.java and CelestialSystem.java,&#10;Refactored the CelestialSystemIndex.java class to CelestialSystemIndexTree.java and&#10;defined the CelestialSystemIndex interface, which will be implemented in the&#10;CelestialSystemIndexMap.java class.&#10;&#10;CelestialSystemIndexMap.java is not working, it doesn't check the bodies in the systems&#10;which get added for duplicates." />
+    <option name="LAST_COMMIT_MESSAGE" value="Overwritten equals and hashCode in CelestialBody.java and CelestialSystem.java,&#10;Refactored the CelestialSystemIndex.java class to CelestialSystemIndexTree.java and&#10;defined the CelestialSystemIndex interface, which will be implemented in the&#10;CelestialSystemIndexMap.java class.&#10;&#10;CelestialSystemIndexMap.java is not working, it doesn't check the bodies in the systems&#10;which get added for duplicates." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1589108146999">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1589181793788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589108146999" />
-    <state x="359" y="114" key="CommitChangelistDialog2" timestamp="1589110271324">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589181793788" />
+    <state x="231" y="95" width="1202" height="832" key="CommitChangelistDialog2" timestamp="1589110520657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="359" y="114" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110271324" />
+    <state x="231" y="95" width="1202" height="832" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110520657" />
     <state x="359" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586536727663" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589007385467">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589140339569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589007385467" />
     <state x="2660" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586870766797" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1589110255942">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589140339569" />
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom" timestamp="1589181247352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256256" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255942" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1589110255941">
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137264" />
+    <state width="1877" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589181247352" />
+    <state width="1877" height="272" key="GridCell.Tab.0.center" timestamp="1589181247351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256255" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255941" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431478" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1589110255941">
+    <state width="1877" height="272" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137263" />
+    <state width="1877" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589181247351" />
+    <state width="1877" height="272" key="GridCell.Tab.0.left" timestamp="1589181247350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256255" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255941" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431477" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1589110255942">
+    <state width="1877" height="272" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137262" />
+    <state width="1877" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589181247350" />
+    <state width="1877" height="272" key="GridCell.Tab.0.right" timestamp="1589181247351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256256" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255942" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431478" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1589110255944">
+    <state width="1877" height="272" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137264" />
+    <state width="1877" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589181247351" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1589180362388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255944" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431480" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1589110255943">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118135561" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589180362388" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1589180362387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255943" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1589110255943">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118135561" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589180362387" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1589180362387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255943" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1589110255944">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118135560" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589180362387" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1589180362387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110255944" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586537431479" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587389188517">
+    <state width="1877" height="347" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118135561" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589180362387" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589110529528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587389188517" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110529528" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586198105390" />
     <state x="453" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1586194513384">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -565,14 +571,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586974690894" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589139916075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589139916075" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Simulation.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="3" />
+          <line>54</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
