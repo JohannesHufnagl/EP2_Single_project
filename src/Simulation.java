@@ -53,12 +53,15 @@ public class Simulation {
         System.out.println(hashmap.contains(Io));
 
         System.out.println(hashmap.add(otherSystem));
-        System.out.println(hashmap2.add(otherSystem));
+        System.out.println(hashmap2.add(otherSystem.reverse()));
         System.out.println(hashmap.contains(Io));
         System.out.println(hashmap);
         System.out.println(hashmap2);
 
         System.out.println(hashmap.equals(hashmap2));
+
+        System.out.println(hashmap.hashCode());
+        System.out.println(hashmap2.hashCode());
 
 
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];

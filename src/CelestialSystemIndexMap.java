@@ -120,14 +120,19 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CelestialSystemIndexMap that = (CelestialSystemIndexMap) o;
-        return Arrays.equals(keys, that.keys) &&
-                Arrays.equals(values, that.values);
+        if (that.n != this.n) return false;
+        for (int i = 0; i < m; i++) {
+            if (that.contains(keys[i]) && keys[i] != null && values[i].equals(that.values[i])) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public int hashCode() {
         int result = Arrays.hashCode(keys);
-        result = 31 * result + Arrays.hashCode(values);
+        result += 31 * Arrays.hashCode(values);
         return result;
     }
 
