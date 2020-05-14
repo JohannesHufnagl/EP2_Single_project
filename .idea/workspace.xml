@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="CelestialSystemIndexMap.java is now working.&#10;TODO: &#10;check if equals and hashCode is correct.&#10;CelestialSystemIndexTreeVariant.java &#10;Zusatzfragen">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented CelestialSystemIndexTreeVariant.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexTreeVariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexTreeVariant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +210,7 @@
       <workItem from="1589180578017" duration="5184000" />
       <workItem from="1589225305747" duration="617000" />
       <workItem from="1589275379835" duration="619000" />
-      <workItem from="1589444248381" duration="10816000" />
+      <workItem from="1589444248381" duration="12772000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -432,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589182342923</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Implemented CelestialSystemIndexTreeVariant.java">
+      <created>1589483835133</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1589483835133</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +471,6 @@
       <path value="$PROJECT_DIR$/../.." />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="featherSimulation is working and all instances are implemented but not&#10;polished" />
     <MESSAGE value="Started commenting Body()" />
     <MESSAGE value="Commented Methods of Body() and Space() - v0" />
     <MESSAGE value="Added a method for the &quot;Zusatzfrage&quot;" />
@@ -492,7 +495,8 @@
     <MESSAGE value="changed the ComplexCelestialSystem.java method size() to the right solution" />
     <MESSAGE value="Overwritten equals and hashCode in CelestialBody.java and CelestialSystem.java,&#10;Refactored the CelestialSystemIndex.java class to CelestialSystemIndexTree.java and&#10;defined the CelestialSystemIndex interface, which will be implemented in the&#10;CelestialSystemIndexMap.java class.&#10;&#10;CelestialSystemIndexMap.java is not working, it doesn't check the bodies in the systems&#10;which get added for duplicates." />
     <MESSAGE value="CelestialSystemIndexMap.java is now working.&#10;TODO: &#10;check if equals and hashCode is correct.&#10;CelestialSystemIndexTreeVariant.java &#10;Zusatzfragen" />
-    <option name="LAST_COMMIT_MESSAGE" value="CelestialSystemIndexMap.java is now working.&#10;TODO: &#10;check if equals and hashCode is correct.&#10;CelestialSystemIndexTreeVariant.java &#10;Zusatzfragen" />
+    <MESSAGE value="Implemented CelestialSystemIndexTreeVariant.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented CelestialSystemIndexTreeVariant.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -502,11 +506,11 @@
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589108146999" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589481615399" />
-    <state x="359" y="109" width="1202" height="832" key="CommitChangelistDialog2" timestamp="1589280176242">
+    <state x="359" y="109" width="1202" height="832" key="CommitChangelistDialog2" timestamp="1589483832023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="231" y="95" width="1202" height="832" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110520657" />
-    <state x="359" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589280176242" />
+    <state x="359" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589483832023" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589267291792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -557,11 +561,11 @@
     </state>
     <state width="1877" height="347" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118135561" />
     <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589180362387" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589182361345">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589483840468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110529528" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589182361345" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589483840468" />
     <state x="453" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1589280156692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -584,10 +588,10 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1586974690894" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589466699944" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589139916075">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589485397657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589139916075" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589485397657" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

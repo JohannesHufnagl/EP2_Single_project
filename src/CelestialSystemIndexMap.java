@@ -190,17 +190,19 @@ ________________________________________________________________________________
              um einen hashCode zu generieren.
 ________________________________________________________________________________________________________________________
     3. Welche Bedingungen gelten allgemein für die Methoden equals und hashCode?
-    equals:
-       -> Für x != null liefert x.equals(null) stets false
-       -> Für x != null liefert x.equals(x) stets (reflexiv)
-       -> FÜr x != null und y != null liefert x.equals(y) stets das gleiche Ergebnis wie y.equals(x) (symmetrisch)
-       -> Wenn x.equals(y) und y.equals(z) beide true leifern, dann tut dies auch x.equals(z) (transitiv)
-       -> Solange x und y nicht geändert werden, liefern wiederholte Aufrufe von x.equals(y) stets gleiche Ergebnisse.
 
-       hashCode:
-       -> Hat x.equals(y) als Ergebnis ture, dann gibt x.hashCode() dieselbe Zahl zurück wie y.hashCode().
-       -> Solange x nicht geändert wird, liefern wiederholte Aufrufe von x.hashCode stets gleiche Ergebnisse.
-       -> x.hashCode() == y.hashCode() folgt aus x.equals(y)
+        equals:
+            - x != null liefert x.equals(null) stets false
+            - x != null liefert x.equals(x) stets (reflexiv)
+            - x != null und y != null liefert x.equals(y) stets das gleiche Ergebnis wie y.equals(x) (symmetrisch)
+            - x.equals(y) und y.equals(z) beide true leifern, dann tut dies auch x.equals(z) (transitiv)
+            - Die Ergebnise müssen wiederholbar sein, dass bedeutet das bei unveränderten x und y equals das selbe
+            Ergebnis liefert.
+
+        hashCode:
+            - Hat x.equals(y) als Ergebnis ture, dann x.hashCode() == y.hashCode().
+            - Solange x nicht geändert wird, liefern wiederholte Aufrufe von x.hashCode stets gleiche Ergebnisse.
+            - x.hashCode() == y.hashCode() folgt aus x.equals(y)
 ________________________________________________________________________________________________________________________
     4. Gilt in Ihrer Lösung, dass x.toString().equals(y.toString()) den Wert true liefert,
        wenn x.equals(y) den Wert true liefert? Welche Probleme können entstehen, wenn diese Bedingung nicht erfüllt ist?
@@ -212,4 +214,16 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________
     5. Was könnte man ändern, damit neben CelestialSystemIndexMap auch CelestialSystemIndexTree das Interface
        CelestialSystemIndex implementieren kann?
+
+       Antwort: Ich habe es probiert, indem ich die hashMap in der ich die Systeme im Baum speichere als Klassenattribut
+                definiere um jederzeit, auf alle Systeme im Baum zugreifen zu können.
+                Danach müssen die Methoden vom Interface noch implementiert werden. (siehe Klasse)
+                Die add-Methode bleibt bis auf die Kommentare unverändert.
+                Neu zu implementieren ist eine get-Methode, mit einem CelestialBody als Übergabeparameter, dazu nutze
+                ich die find-Methode die ich in der MyTreeNode Klasse schon implementiert habe.
+                Diese ist auch für die contains Methode nützlich.
+                Für die equals-Methode iteriere ich mit dem Iterator der hashSet Klasse über die Systeme und versuche
+                diese zu adden, würde dies funktionieren, würde das bedeuten, dass die zu vergleichenden Objekte nicht
+                equal sind.
+
  */
