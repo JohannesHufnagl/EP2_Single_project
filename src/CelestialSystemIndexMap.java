@@ -1,4 +1,3 @@
-// TODO: define class according to 'Aufgabenblatt5'.
 /*
 Vervollständigen Sie eine Klasse CelestialSystemIndexMap, die das Interface CelestialSystemIndex
 mittels Hash-Tabelle implementiert. Verwenden Sie dabei keine vorgefertigten Klassen aus dem
@@ -7,21 +6,23 @@ Wählen Sie eine geeignete Form der Kollisionsbehandlung. Testen Sie die Impleme
 mit eigenen Testfällen. Die Klasse CelestialSystemIndexMap soll einen parameterlosen Konstruktor haben.
  */
 
-
 import java.util.Arrays;
 
 public class CelestialSystemIndexMap implements CelestialSystemIndex {
 
-    private int m = 50;
-    private CelestialBody[] keys = new CelestialBody[m];
-    private CelestialSystem[] values = new CelestialSystem[m];
-    private final static double a = (Math.sqrt(5) - 1) / 2;
-    private int n;
+    private int m = 50; // size of the hash map when first initialized
+    private CelestialBody[] keys = new CelestialBody[m]; // keys of the hash map
+    private CelestialSystem[] values = new CelestialSystem[m]; // values of the hash map
+    private final static double a = (Math.sqrt(5) - 1) / 2; // irrational number for calculation (golden ratio)
+    private int n; // variable that stores the hash map entries
 
     public CelestialSystemIndexMap() {
         n = 0;
     }
 
+    // Method which calculates and returns the index where the new entry should be stored.
+    // This method is responsible for collision handling, by increasing the parameter i.
+    // This type of collision handling is called quadratic probing
     private int hashfunction(CelestialBody k, int i) {
         int y = (int) (k.hashCode() * a);
         double z = k.hashCode() * a;
@@ -29,6 +30,8 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
         return (int) ((x + 0.5 * i + 0.5 * i * i) % m);
     }
 
+    // Method which calculates and returns the index where the new entry should be stored.
+    // here no additional parameter is handed over, simply to get the first index where 'k' would be added.
     private int hashfunction(CelestialBody k) {
         int y = (int) (k.hashCode() * a);
         double z = k.hashCode() * a;
@@ -36,6 +39,8 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
 
     }
 
+    // returns the index where CelestialBody k is stored
+    // if CelestialBody k is not in the hash map, the length of the hash map - 1 is returned
     private int find(CelestialBody k) {
         if (k == null) {
             return keys.length - 1;
@@ -57,6 +62,15 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
         return keys.length - 1;
     }
 
+    // Adds a system of bodies to the hash map.
+    // Adding a system adds multiple (key, value) pairs to the
+    // hash map, one for each body of the system, with the same
+    // value, i.e., reference to the celestial system.
+    // An attempt to add a system with a body that already exists
+    // in the hash map leaves the hash map unchanged and the returned
+    // value would be 'false'.
+    // The method returns 'true' if the index was changed as a
+    // result of the call and 'false' otherwise.
     @Override
     public boolean add(CelestialSystem system) {
         if (system == null) {
@@ -102,11 +116,16 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
         return true;
     }
 
+    // Returns the celestial system with which a body is
+    // associated. If body is not contained as a key, 'null'
+    // is returned.
     @Override
     public CelestialSystem get(CelestialBody body) {
         return values[find(body)];
     }
 
+    // Returns 'true' if the specified 'body' is listed
+    // in the hash map.
     @Override
     public boolean contains(CelestialBody body) {
         if (find(body) != keys.length - 1) {
@@ -115,6 +134,12 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
         return false;
     }
 
+    // Returns 'true' if 'o' is of the same class as 'this' and
+    // 'this' and 'o' contain an equal set of
+    // (key, value) pairs, i.e. each (key, value) pair of 'this'
+    // is contained (i.e. has an equal counterpart) in 'o' and
+    // vice versa. Two (key, value) pairs are equal if they have
+    // equal keys and equal values.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -157,19 +182,34 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
     Antwort: Es wird nicht mehr richtig erkannt ob ein body bereits in der Hash-Tabelle vorhanden ist. Daraus folgt,
              dass nun gleiche (im Sinne von gleichen bodys was ja eigentlich in der equals Methode in CelestialBody
              überprüft wurde) (body, system) Paare mehrfach hinzugefügt werden können.
-
+________________________________________________________________________________________________________________________
     2. Was passiert, wenn Sie nur hashCode löschen?
 
     Antwort: Im ersten Augenblick passiert nichts, jedoch wird nun die hashCode Methode von der Object Klasse verwendet,
              um einen hashCode zu generieren. In der Object Methode werden jedoch alle CelestialBody Attribute verwendet
              um einen hashCode zu generieren.
-
+________________________________________________________________________________________________________________________
     3. Welche Bedingungen gelten allgemein für die Methoden equals und hashCode?
+    equals:
+       -> Für x != null liefert x.equals(null) stets false
+       -> Für x != null liefert x.equals(x) stets (reflexiv)
+       -> FÜr x != null und y != null liefert x.equals(y) stets das gleiche Ergebnis wie y.equals(x) (symmetrisch)
+       -> Wenn x.equals(y) und y.equals(z) beide true leifern, dann tut dies auch x.equals(z) (transitiv)
+       -> Solange x und y nicht geändert werden, liefern wiederholte Aufrufe von x.equals(y) stets gleiche Ergebnisse.
 
+       hashCode:
+       -> Hat x.equals(y) als Ergebnis ture, dann gibt x.hashCode() dieselbe Zahl zurück wie y.hashCode().
+       -> Solange x nicht geändert wird, liefern wiederholte Aufrufe von x.hashCode stets gleiche Ergebnisse.
+       -> x.hashCode() == y.hashCode() folgt aus x.equals(y)
+________________________________________________________________________________________________________________________
     4. Gilt in Ihrer Lösung, dass x.toString().equals(y.toString()) den Wert true liefert,
        wenn x.equals(y) den Wert true liefert? Welche Probleme können entstehen, wenn diese Bedingung nicht erfüllt ist?
        (Anmerkung: Es war in diesem Aufgabenblatt nicht verlangt, dass Ihre Lösung die Bedingung erfüllen muss.)
 
+       Antwort: Nein, da die erzeugten Strings nicht gleich sind. Das liegt daran, dass die Reihenfolge der Bodys in
+                einem CelestialSystem keine Rolle spielt. Auch bei der Hash-Tabelle wird die Reihenfolge nicht beachtet,
+                sondern lediglich der Inhalt.
+________________________________________________________________________________________________________________________
     5. Was könnte man ändern, damit neben CelestialSystemIndexMap auch CelestialSystemIndexTree das Interface
        CelestialSystemIndex implementieren kann?
  */

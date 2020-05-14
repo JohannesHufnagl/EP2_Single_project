@@ -1,8 +1,9 @@
-import java.util.Objects;
+import java.util.HashSet;
 
 public class CelestialSystemIndexTreeVariant implements CelestialSystemIndex {
 
     private MyTreeNode root;
+    private HashSet<CelestialSystem> h = new HashSet<>();
 
     @Override
     public boolean add(CelestialSystem system) {
@@ -40,11 +41,42 @@ public class CelestialSystemIndexTreeVariant implements CelestialSystemIndex {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CelestialSystemIndexTreeVariant that = (CelestialSystemIndexTreeVariant) o;
-        return Objects.equals(root, that.root);
+        if (this.numberOfBodies() != that.numberOfBodies() || this.numberOfSystems() != that.numberOfSystems()) {
+            return false;
+        }
+        for (int i = 0; i < this.h.size(); i++) {
+            if (that.add(this.h.iterator().next())) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(root);
+        int x = 73651;
+        int hash = x;
+        for (int i = 1; i < this.h.size(); i++) {
+            hash += x * i + h.size();
+        }
+        return hash;
     }
+
+    // Returns the overall number of bodies indexed by the tree.
+    public int numberOfBodies() {
+        if (root != null) {
+            return root.countNodes();
+        } else return 0;
+    }
+
+    // Returns the overall number of systems indexed by the tree.
+    public int numberOfSystems() {
+        if (root == null) {
+            return 0;
+        }
+        h.add(root.systemName());
+        return root.countSystems(h);
+    }
+
+
 }

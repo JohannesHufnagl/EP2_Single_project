@@ -61,17 +61,3 @@ public class CelestialSystemIndexTree {
         return root.countSystems(h);
     }
 }
-/*
- Zusatzfrage:
- Wie müsste man die Methoden von CelestialSystemIndex ändern, wenn man
- im Baum nicht nur mit Namen von Himmelskörpern, sondern auch mit
- Namen von System suchen will?
-
- Der binäre Suchbaum ist lexikographisch nach den Namen der bodys sortiert. Um den Baum nun zu traversieren damit man
- auch mit Namen von Systemen suchen kann, könnte der Baum mit einer inorder() Methode durchgegangen werden, dass ist
- möglich, da der Baum lexikographisch sortiert ist. Dabei werden alle Knoten in aufsteigender Reihenfolge durchgegangen.
- Findet man einen Knoten mit dem gesuchten System, kann das System ausgegeben werden und die Suche muss nicht weiter
- fortgesetzt werden.
- Falls das System nicht im Baum enthalten ist, wird null retourniert.
- */
-

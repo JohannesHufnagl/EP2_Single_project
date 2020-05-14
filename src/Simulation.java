@@ -1,5 +1,3 @@
-import java.awt.*;
-
 public class Simulation {
 
     // one astronomical unit (AU) is the average distance of earth to the sun.
@@ -9,60 +7,7 @@ public class Simulation {
 
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
-
         CelestialSystem solarsystem = ReadDataUtil.initialize(60);
-        ComplexCelestialSystem universe = new ComplexCelestialSystem("Universe");
-        universe.add(solarsystem);
-
-        CelestialSystem solarsystem2 = ReadDataUtil.initialize(40);
-
-        CelestialSystem otherSystem = new CelestialSystem("emtpy system");
-        CelestialBody Io = new CelestialBody("Io", 1, 1, new Vector3(1, 1, 1), new Vector3(1, 1, 1), StdDraw.BLACK);
-        otherSystem.add(Io);
-
-        System.out.println(solarsystem.equals(solarsystem)); // true
-        System.out.println(solarsystem.equals(solarsystem2)); // true
-        System.out.println(solarsystem.equals(otherSystem)); // false
-
-        CelestialSystemIndexMap hashmap = new CelestialSystemIndexMap();
-        CelestialSystemIndexMap hashmap2 = new CelestialSystemIndexMap();
-
-        System.out.println(hashmap.add(solarsystem));
-        System.out.println(hashmap.add(solarsystem2));
-
-        System.out.println(hashmap2.add(solarsystem));
-        System.out.println(hashmap2.add(solarsystem2));
-
-        System.out.println(hashmap.contains(Io));
-        System.out.println(hashmap.get(Io));
-
-        System.out.println(hashmap);
-        System.out.println(hashmap2);
-
-        for (int i = 0; i < 100; i++) {
-            CelestialBody test = new CelestialBody("test" + i, Math.random() * 1e25, Math.random() * 1e3,
-                    new Vector3((Math.random() * 4 * AU),
-                            (Math.random() * 4 * AU),
-                            (Math.random() * 4 * AU)),
-                    new Vector3(0, 0, 0),
-                    new Color((int) (Math.random() * 256 - 100) + 100,
-                            (int) (Math.random() * 256 - 100) + 100,
-                            (int) (Math.random() * 256 - 100) + 100));
-            otherSystem.add(test);
-        }
-        System.out.println(hashmap.contains(Io));
-
-        System.out.println(hashmap.add(otherSystem));
-        System.out.println(hashmap2.add(otherSystem.reverse()));
-        System.out.println(hashmap.contains(Io));
-        System.out.println(hashmap);
-        System.out.println(hashmap2);
-
-        System.out.println(hashmap.equals(hashmap2));
-
-        System.out.println(hashmap.hashCode());
-        System.out.println(hashmap2.hashCode());
-
 
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
 
