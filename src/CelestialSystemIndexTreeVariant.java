@@ -1,39 +1,31 @@
 import java.util.HashSet;
 
-public class CelestialSystemIndexTreeVariant implements CelestialSystemIndex {
+public class CelestialSystemIndexTreeVariant extends CelestialSystemIndexTree implements CelestialSystemIndex {
 
-    private MyTreeNode root;
     private HashSet<CelestialSystem> h = new HashSet<>();
 
+    // Adds a system of bodies to the tree.
+    // Adding a system adds multiple (key, value) pairs to the
+    // tree, one for each body of the system, with the same
+    // value, i.e., reference to the celestial system.
+    // An attempt to add a system with a body that already exists
+    // in the tree leaves the tree unchanged and the returned
+    // value would be 'false'.
+    // The method returns 'true' if the tree was changed as a
+    // result of the call and 'false' otherwise.
     @Override
     public boolean add(CelestialSystem system) {
-        for (int i = 0; i < system.size(); i++) {
-            if (root != null && root.find(system.get(i).getName()) != null)
-                return false;
-        }
-
-        for (int i = 0; i < system.size(); i++) {
-            if (root == null) {
-                root = new MyTreeNode(system.get(0).getName(), system);
-                i++;
-            }
-            root.put(system.get(i).getName(), system);
-        }
-        return true;
+        return super.add(system);
     }
 
     @Override
     public CelestialSystem get(CelestialBody body) {
-        if (root == null) {
-            return null;
-        }
-        MyTreeNode node = root.find(body.getName());
-        return node == null ? null : node.systemName();
+        return super.get(body.getName());
     }
 
     @Override
     public boolean contains(CelestialBody body) {
-        return root.find(body.getName()) != null;
+        return super.get(body.getName()) != null;
     }
 
     @Override
@@ -64,18 +56,12 @@ public class CelestialSystemIndexTreeVariant implements CelestialSystemIndex {
 
     // Returns the overall number of bodies indexed by the tree.
     public int numberOfBodies() {
-        if (root != null) {
-            return root.countNodes();
-        } else return 0;
+        return super.numberOfBodies();
     }
 
     // Returns the overall number of systems indexed by the tree.
     public int numberOfSystems() {
-        if (root == null) {
-            return 0;
-        }
-        h.add(root.systemName());
-        return root.countSystems(h);
+        return super.numberOfSystems();
     }
 
 

@@ -147,8 +147,10 @@ public class CelestialSystemIndexMap implements CelestialSystemIndex {
         CelestialSystemIndexMap that = (CelestialSystemIndexMap) o;
         if (that.n != this.n) return false;
         for (int i = 0; i < m; i++) {
-            if (that.contains(keys[i]) && keys[i] != null && values[i].equals(that.values[i])) {
-                return false;
+            if (keys[i] != null) {
+                if (!that.contains(keys[i]) || !values[i].equals(that.values[that.find(keys[i])])) {
+                    return false;
+                }
             }
         }
         return true;
@@ -187,7 +189,8 @@ ________________________________________________________________________________
 
     Antwort: Im ersten Augenblick passiert nichts, jedoch wird nun die hashCode Methode von der Object Klasse verwendet,
              um einen hashCode zu generieren. In der Object Methode werden jedoch alle CelestialBody Attribute verwendet
-             um einen hashCode zu generieren.
+             um einen hashCode zu generieren. Das führt dazu, dass die equals Methode nicht mehr mit der hashCode Methode
+             zusammenpasst.
 ________________________________________________________________________________________________________________________
     3. Welche Bedingungen gelten allgemein für die Methoden equals und hashCode?
 
@@ -218,10 +221,9 @@ ________________________________________________________________________________
        Antwort: Ich habe es probiert, indem ich die hashMap in der ich die Systeme im Baum speichere als Klassenattribut
                 definiere um jederzeit, auf alle Systeme im Baum zugreifen zu können.
                 Danach müssen die Methoden vom Interface noch implementiert werden. (siehe Klasse)
-                Die add-Methode bleibt bis auf die Kommentare unverändert.
-                Neu zu implementieren ist eine get-Methode, mit einem CelestialBody als Übergabeparameter, dazu nutze
-                ich die find-Methode die ich in der MyTreeNode Klasse schon implementiert habe.
-                Diese ist auch für die contains Methode nützlich.
+                Die verschiedenen Methoden rufe ich mittels Generalisierung auf. Dabei erbt die Klasse CelestialSystem-
+                IndexTreeVariant von der Klasse CelestialSystemIndexTree und kann ihre Methoden nutzen.
+                Ein paar Kleinigkeiten müssen noch verändert werden (z.B. die Übergabeparameter angepasst)
                 Für die equals-Methode iteriere ich mit dem Iterator der hashSet Klasse über die Systeme und versuche
                 diese zu adden, würde dies funktionieren, würde das bedeuten, dass die zu vergleichenden Objekte nicht
                 equal sind.

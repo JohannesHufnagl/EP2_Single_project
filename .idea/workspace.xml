@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="Implemented CelestialSystemIndexTreeVariant.java">
+    <list default="true" id="d07a01e8-eda5-4564-867b-5ae8298772c8" name="Default" comment="changed the equals method in CelestialSystemIndexMap.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CelestialSystemIndexTreeVariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CelestialSystemIndexTreeVariant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +212,7 @@
       <workItem from="1589180578017" duration="5184000" />
       <workItem from="1589225305747" duration="617000" />
       <workItem from="1589275379835" duration="619000" />
-      <workItem from="1589444248381" duration="12772000" />
+      <workItem from="1589444248381" duration="16222000" />
     </task>
     <task id="LOCAL-00001" summary="A1 geändert">
       <created>1538405460105</created>
@@ -436,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589483835133</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="answered the additional questions">
+      <created>1589485815096</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589485815096</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +480,6 @@
       <path value="$PROJECT_DIR$/../.." />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Started commenting Body()" />
     <MESSAGE value="Commented Methods of Body() and Space() - v0" />
     <MESSAGE value="Added a method for the &quot;Zusatzfrage&quot;" />
     <MESSAGE value="created a default constructor" />
@@ -496,7 +504,8 @@
     <MESSAGE value="Overwritten equals and hashCode in CelestialBody.java and CelestialSystem.java,&#10;Refactored the CelestialSystemIndex.java class to CelestialSystemIndexTree.java and&#10;defined the CelestialSystemIndex interface, which will be implemented in the&#10;CelestialSystemIndexMap.java class.&#10;&#10;CelestialSystemIndexMap.java is not working, it doesn't check the bodies in the systems&#10;which get added for duplicates." />
     <MESSAGE value="CelestialSystemIndexMap.java is now working.&#10;TODO: &#10;check if equals and hashCode is correct.&#10;CelestialSystemIndexTreeVariant.java &#10;Zusatzfragen" />
     <MESSAGE value="Implemented CelestialSystemIndexTreeVariant.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented CelestialSystemIndexTreeVariant.java" />
+    <MESSAGE value="answered the additional questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="answered the additional questions" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -506,41 +515,41 @@
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589108146999" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589481615399" />
-    <state x="359" y="109" width="1202" height="832" key="CommitChangelistDialog2" timestamp="1589483832023">
+    <state x="359" y="109" width="1202" height="832" key="CommitChangelistDialog2" timestamp="1589535266098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="231" y="95" width="1202" height="832" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110520657" />
-    <state x="359" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589483832023" />
+    <state x="359" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589535266098" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589267291792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589007385467" />
     <state x="2660" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586870766797" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589267291792" />
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1589483768403">
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1589535017786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256256" />
     <state width="1877" height="272" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137264" />
-    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589483768403" />
-    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1589483768402">
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589535017786" />
+    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1589535017785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256255" />
     <state width="1877" height="272" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137263" />
-    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589483768402" />
-    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1589483768402">
+    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589535017785" />
+    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1589535017785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256255" />
     <state width="1877" height="272" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137262" />
-    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589483768402" />
-    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1589483768403">
+    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589535017785" />
+    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1589535017786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="272" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1587408256256" />
     <state width="1877" height="272" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118137264" />
-    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589483768403" />
+    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589535017786" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1589180362388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -561,11 +570,11 @@
     </state>
     <state width="1877" height="347" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589118135561" />
     <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589180362387" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589483840468">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589485817951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589110529528" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589483840468" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589485817951" />
     <state x="453" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1589280156692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
