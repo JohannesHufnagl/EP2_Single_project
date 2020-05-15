@@ -214,6 +214,8 @@ ________________________________________________________________________________
        Antwort: Nein, da die erzeugten Strings nicht gleich sind. Das liegt daran, dass die Reihenfolge der Bodys in
                 einem CelestialSystem keine Rolle spielt. Auch bei der Hash-Tabelle wird die Reihenfolge nicht beachtet,
                 sondern lediglich der Inhalt.
+                Probleme sind dabei das der Anwender denkt die Strings wärene gleich obwohl sie das nicht sind oder wenn
+                dieser Vergleich in einer Methode verwendet wird, da man davon ausgeht, dass die Ausgabe gleich sein muss.
 ________________________________________________________________________________________________________________________
     5. Was könnte man ändern, damit neben CelestialSystemIndexMap auch CelestialSystemIndexTree das Interface
        CelestialSystemIndex implementieren kann?
