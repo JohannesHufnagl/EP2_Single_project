@@ -18,16 +18,27 @@ public class CelestialSystemIndexTreeVariant extends CelestialSystemIndexTree im
         return super.add(system);
     }
 
+    // Returns the celestial system with which a body is
+    // associated. If body is not contained as a key, 'null'
+    // is returned.
     @Override
     public CelestialSystem get(CelestialBody body) {
         return super.get(body.getName());
     }
 
+    // Returns 'true' if the specified 'body' is listed
+    // in the tree.
     @Override
     public boolean contains(CelestialBody body) {
         return super.get(body.getName()) != null;
     }
 
+    // Returns 'true' if 'o' is of the same class as 'this' and
+    // 'this' and 'o' contain an equal set of
+    // (key, value) pairs, i.e. each (key, value) pair of 'this'
+    // is contained (i.e. has an equal counterpart) in 'o' and
+    // vice versa. Two (key, value) pairs are equal if they have
+    // equal keys and equal values.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,6 +74,4 @@ public class CelestialSystemIndexTreeVariant extends CelestialSystemIndexTree im
     public int numberOfSystems() {
         return super.numberOfSystems();
     }
-
-
 }
