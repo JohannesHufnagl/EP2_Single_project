@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class Simulation {
 
     // one astronomical unit (AU) is the average distance of earth to the sun.
@@ -8,6 +10,54 @@ public class Simulation {
     // The main simulation method using instances of other classes.
     public static void main(String[] args) {
         CelestialSystem solarsystem = ReadDataUtil.initialize(60);
+
+        // Testing the Iterator of CelestialSystem
+        System.out.println();
+        for (Iterator i = solarsystem.iterator(); i.hasNext(); ) {
+            System.out.println(i.next() + " ,");
+        }
+
+        CelestialBodyNameComparator comparator = new CelestialBodyNameComparator();
+        CelestialSystemIndexTreeVariantC treeVariantC = new CelestialSystemIndexTreeVariantC(comparator);
+
+        // --- Testing the class CelestialSystemIndex ---
+        System.out.println("--- Testing the class CelestialSystemIndex ---");
+        // CelestialSystemIndexTreeVariantC: Dwarf-Planets (only the names of the bodies are relevant to test the CelestialSystemIndex-Class
+        CelestialBody ceres = new CelestialBody("Ceres", 1, 1, new Vector3(0, 0, 0), new Vector3(0, 0, 0), StdDraw.BLACK);
+        CelestialBody pluto = new CelestialBody("Pluto", 1, 1, new Vector3(0, 0, 0), new Vector3(0, 0, 0), StdDraw.BLACK);
+        CelestialBody haumea = new CelestialBody("Haumea", 1, 1, new Vector3(0, 0, 0), new Vector3(0, 0, 0), StdDraw.BLACK);
+        CelestialBody eris = new CelestialBody("Eris", 1, 1, new Vector3(0, 0, 0), new Vector3(0, 0, 0), StdDraw.BLACK);
+        CelestialBody makemake = new CelestialBody("Makemake", 1, 1, new Vector3(0, 0, 0), new Vector3(0, 0, 0), StdDraw.BLACK);
+
+        CelestialSystem dwarfPlanets = new CelestialSystem("Dwarf-Planets");
+        dwarfPlanets.add(ceres);
+        dwarfPlanets.add(pluto);
+        dwarfPlanets.add(haumea);
+        dwarfPlanets.add(eris);
+        dwarfPlanets.add(makemake);
+
+        CelestialBody moon = new CelestialBody("Moon", 7.349e22, 1.738e6, new Vector3(149.6e9 + 384400e3, 0, 0), new Vector3(0, 29.78e3 + 1.023e3, 0), StdDraw.WHITE);
+
+        CelestialSystem earthMoon = new CelestialSystem("Earth Moon");
+        earthMoon.add(moon);
+
+        System.out.println(treeVariantC.add(dwarfPlanets));
+        System.out.println(treeVariantC.add(solarsystem));
+
+        // CelestialSystemIndexTreeVariantC: Add different CelestialSystems to the CelestialSystemIndex-Binary-Tree
+        System.out.println(solarsystem.reverse().getName() + " added to the binary tree: --> " + treeVariantC.add(solarsystem.reverse()) + " (false)");
+        System.out.println(dwarfPlanets.getName() + " added to the binary tree: --> " + treeVariantC.add(dwarfPlanets) + " (false)");
+        System.out.println(earthMoon.getName() + " added to the binary tree: --> " + treeVariantC.add(earthMoon) + " (true)");
+
+        // CelestialSystemIndexTreeVariantC: The ToString-Method to represent the names of the bodies of the binary-tree in lexicographical order
+        System.out.println("Bodies in the binary tree: --> " + treeVariantC.toString());
+
+        // Testing the Iterator of CelestialSystemIndexTreeVariantC
+        System.out.println();
+        for (Iterator i = treeVariantC.iterator(); i.hasNext(); ) {
+            System.out.println(i.next() + " ,");
+        }
+
 
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
 

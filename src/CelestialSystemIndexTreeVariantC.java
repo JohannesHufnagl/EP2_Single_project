@@ -1,6 +1,6 @@
 //TODO: change class definition below according to specification in 'Aufgabenblatt6'.
 
-public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex {
+public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, CelestialBodyIterable {
 
     private VariantCNode root;
     private CelestialBodyComparator comparator;
@@ -89,6 +89,14 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex {
         return comparator;
     }
 
+    @Override
+    public CelestialBodyIterator iterator() {
+        MyTreeIter iter = new MyTreeIter();
+        if (root != null) {
+            root.iter(iter, false);
+        }
+        return iter;
+    }
 }
 
 class VariantCNode {
@@ -160,6 +168,44 @@ class VariantCNode {
 
     }
 
+    public CelestialBody iter(MyTreeIter iter, boolean next) {
+        VariantCNode n = next ? right : this;
+        while (n != null) {
+            new MyTreeIter(n, iter);
+            n = n.left;
+        }
+        return this.key;
+    }
 }
+
+class MyTreeIter implements CelestialBodyIterator {
+    private VariantCNode node;
+    private MyTreeIter parent;
+
+    public MyTreeIter() {
+    }
+
+    public MyTreeIter(VariantCNode n, MyTreeIter p) {
+        node = p.node;
+        p.node = n;
+        parent = p.parent;
+        p.parent = this;
+    }
+
+    public boolean hasNext() {
+        return node != null;
+    }
+
+    public CelestialBody next() {
+        if (node == null) {
+            return null;
+        }
+        VariantCNode todo = node;
+        node = parent.node;
+        parent = parent.parent;
+        return todo.iter(this, true);
+    }
+}
+
 
 
