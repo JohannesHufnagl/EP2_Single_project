@@ -4,9 +4,6 @@ public class CelestialBodyNameComparator implements CelestialBodyComparator {
     // compares two bodies by their names.
     public int compare(CelestialBody b1, CelestialBody b2) {
         //TODO: implement method.
-        if (b1.equals(b2)) {
-            return 1;
-        }
-        return 0;
+        return b1.getName().compareTo(b2.getName());
     }
 }

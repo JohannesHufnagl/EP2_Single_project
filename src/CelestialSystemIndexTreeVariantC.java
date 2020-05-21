@@ -1,5 +1,3 @@
-//TODO: change class definition below according to specification in 'Aufgabenblatt6'.
-
 public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, CelestialBodyIterable {
 
     private VariantCNode root;
@@ -21,6 +19,12 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
     // The method returns 'true' if the index was changed as a
     // result of the call and 'false' otherwise.
     public boolean add(CelestialSystem system) {
+        // checks if the tree is empty and searches if there are names in the tree,
+        // which are equal to the names of a body in the CelestialSystem, if so, null is returned.
+        for (int i = 0; i < system.size(); i++) {
+            if (root != null && root.get(system.get(i)) != null)
+                return false;
+        }
 
         if (system == null || system.size() == 0) {
             return false;
@@ -72,16 +76,16 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
 
     // Returns a collection view of all entries of this index.
     public CelestialBodyCollection bodies() {
-        //TODO: implement method.
-        return null;
-
+        return new MyCelestialBodyCollection(this);
     }
 
     // Returns all entries of this as a new collection.
     public CelestialSystem bodiesAsCelestialSystem() {
-        //TODO: implement method.
-        return null;
-
+        CelestialSystem allBodies = new CelestialSystem("Bodies as Celestial System");
+        for (CelestialBody b : this) {
+            allBodies.add(new CelestialBody(b));
+        }
+        return allBodies;
     }
 
     // Returns the comparator used in this index.
@@ -96,6 +100,14 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
             root.iter(iter, false);
         }
         return iter;
+    }
+
+    public int size() {
+        int size = 0;
+        for (CelestialBody ignored : this) {
+            size++;
+        }
+        return size;
     }
 }
 
@@ -206,6 +218,27 @@ class MyTreeIter implements CelestialBodyIterator {
         return todo.iter(this, true);
     }
 }
+
+/*
+Zusatzfragen:
+
+1. Wie verhalten sich die von bodies() und bodiesAsCelestialSystem() zurückgelieferten Objekte,
+   wenn deren enthaltene Himmelskörper durch move bewegt werden? Werden dadurch die Himmelskörper
+   des Suchbaums geändert? (Anmerkung: diesbezüglich gibt es im diesem Aufgabenblatt keine Vorgaben).
+
+   Antwort: bodies() implementiert ein shallow copy, d. h. eine Instanz davon, hat dieselbe Referenz
+            wie der Baum selbst. daher werden bei einem move() Aufruf auf diese Objekte auch die Objekte
+            des Baumes bewegt.
+            Bei der bodiesAsCelestialSystem() Methode handelt es sich um ein deep copy, wobei die Werte
+            der Baum-Objekte kopiert werden, aber als neues Objekt mit einer anderen Referenz instanziert
+            werden. Darum werrden bei einem move() Aufruf auf diese Objekte die Baum-Objekte nicht bewegt.
+__________________________________________________________________________________________________________
+2. Wie verhalten sich Ihre Iteratoren, wenn Objekte geändert werden?
+
+   Antwort: //TODO
+
+
+ */
 
 
 

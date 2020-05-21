@@ -34,6 +34,15 @@ public class CelestialBody {
         this.currentMovement = velocity;
     }
 
+    public CelestialBody(CelestialBody body) {
+        this.name = body.name;
+        this.mass = body.mass;
+        this.radius = body.radius;
+        this.color = body.color;
+        this.position = body.position;
+        this.currentMovement = body.currentMovement;
+    }
+
     // Returns the Name of the CelestialBody Object
     public String getName() {
         return name;

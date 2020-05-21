@@ -41,13 +41,22 @@ public class Simulation {
         CelestialSystem earthMoon = new CelestialSystem("Earth Moon");
         earthMoon.add(moon);
 
+        CelestialSystem halfDwarfPlanets = new CelestialSystem("half");
+        halfDwarfPlanets.add(moon);
+        halfDwarfPlanets.add(haumea);
+        halfDwarfPlanets.add(eris);
+
+
         System.out.println(treeVariantC.add(dwarfPlanets));
         System.out.println(treeVariantC.add(solarsystem));
-
+        System.out.println(treeVariantC.bodies().size());
+        System.out.println(treeVariantC.bodiesAsCelestialSystem());
         // CelestialSystemIndexTreeVariantC: Add different CelestialSystems to the CelestialSystemIndex-Binary-Tree
         System.out.println(solarsystem.reverse().getName() + " added to the binary tree: --> " + treeVariantC.add(solarsystem.reverse()) + " (false)");
         System.out.println(dwarfPlanets.getName() + " added to the binary tree: --> " + treeVariantC.add(dwarfPlanets) + " (false)");
-        System.out.println(earthMoon.getName() + " added to the binary tree: --> " + treeVariantC.add(earthMoon) + " (true)");
+        //System.out.println(earthMoon.getName() + " added to the binary tree: --> " + treeVariantC.add(earthMoon) + " (true)");
+
+        System.out.println(treeVariantC.add(halfDwarfPlanets));
 
         // CelestialSystemIndexTreeVariantC: The ToString-Method to represent the names of the bodies of the binary-tree in lexicographical order
         System.out.println("Bodies in the binary tree: --> " + treeVariantC.toString());
@@ -58,6 +67,8 @@ public class Simulation {
             System.out.println(i.next() + " ,");
         }
 
+        System.out.println(treeVariantC.bodies().size());
+        System.out.println(treeVariantC.bodiesAsCelestialSystem());
 
         Vector3[] forceOnBody = new Vector3[solarsystem.size()];
 

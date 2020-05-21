@@ -184,7 +184,6 @@ class MyDLNode {
 
 }
 
-
 class MyDLIter implements CelestialBodyIterator {
     private MyDLNode n;
 
@@ -204,5 +203,4 @@ class MyDLIter implements CelestialBodyIterator {
         n = n.next();
         return result;
     }
-
 }
