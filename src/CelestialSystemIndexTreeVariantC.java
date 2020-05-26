@@ -9,6 +9,10 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
         this.comparator = comparator;
     }
 
+    public VariantCNode getRoot() {
+        return root;
+    }
+
     // Adds a system of bodies to the index.
     // Adding a system adds multiple (key, value) pairs to the
     // index, one for each body of the system, with the same
@@ -19,15 +23,16 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
     // The method returns 'true' if the index was changed as a
     // result of the call and 'false' otherwise.
     public boolean add(CelestialSystem system) {
-        // checks if the tree is empty and searches if there are names in the tree,
-        // which are equal to the names of a body in the CelestialSystem, if so, null is returned.
-        for (int i = 0; i < system.size(); i++) {
-            if (root != null && root.get(system.get(i)) != null)
-                return false;
-        }
-
         if (system == null || system.size() == 0) {
             return false;
+        }
+
+        // checks if the tree is empty and searches if there are names in the tree,
+        // which are equal to the names of a body in the CelestialSystem, if so, null is returned.
+        for (CelestialBody body : system) {
+            if (this.contains(body)) {
+                return false;
+            }
         }
 
         boolean changed = false;
@@ -56,7 +61,6 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
         }
 
         return root.get(body);
-
     }
 
     // Returns 'true' if the specified 'body' is listed
@@ -73,6 +77,35 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
 
         return "{" + root.toString() + "}";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CelestialSystemIndexTreeVariantC that = (CelestialSystemIndexTreeVariantC) o;
+        if (this.root.numberOfNodes() != that.getRoot().numberOfNodes()) {
+            return false;
+        }
+        for (CelestialBody body : this) {
+            if (!that.contains(body) || that.get(body) != this.get(body)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int i = 0;
+        ComplexCelestialSystem complexSystem = new ComplexCelestialSystem("hashCount");
+        for (CelestialBody body : this) {
+            i = i + body.hashCode();
+            complexSystem.add(this.get(body));
+        }
+        i *= complexSystem.hashCode();
+        return i;
+    }
+
 
     // Returns a collection view of all entries of this index.
     public CelestialBodyCollection bodies() {
@@ -103,11 +136,7 @@ public class CelestialSystemIndexTreeVariantC implements CelestialSystemIndex, C
     }
 
     public int size() {
-        int size = 0;
-        for (CelestialBody ignored : this) {
-            size++;
-        }
-        return size;
+        return root.numberOfNodes();
     }
 }
 
@@ -170,6 +199,18 @@ class VariantCNode {
 
     }
 
+    public int numberOfNodes() {
+        int count = 1;
+        if (left != null) {
+            count += left.numberOfNodes();
+        }
+        if (right != null) {
+            count += right.numberOfNodes();
+        }
+        return count;
+    }
+
+
     public String toString() {
         String result;
         result = left == null ? "" : left.toString();
@@ -197,11 +238,11 @@ class MyTreeIter implements CelestialBodyIterator {
     public MyTreeIter() {
     }
 
-    public MyTreeIter(VariantCNode n, MyTreeIter p) {
-        node = p.node;
-        p.node = n;
-        parent = p.parent;
-        p.parent = this;
+    public MyTreeIter(VariantCNode node, MyTreeIter parent) {
+        this.node = parent.node;
+        parent.node = node;
+        this.parent = parent.parent;
+        parent.parent = this;
     }
 
     public boolean hasNext() {
@@ -219,6 +260,32 @@ class MyTreeIter implements CelestialBodyIterator {
     }
 }
 
+class MyCelestialBodyCollection implements CelestialBodyCollection {
+    private CelestialSystemIndexTreeVariantC tree;
+
+    public MyCelestialBodyCollection(CelestialSystemIndexTreeVariantC tree) {
+        this.tree = tree;
+    }
+
+    @Override
+    public boolean add(CelestialBody body) {
+        return false;
+    }
+
+    public int contains(CelestialBody b) {
+        return tree.contains(b) ? 1 : 0;
+    }
+
+    @Override
+    public int size() {
+        return tree.size();
+    }
+
+    @Override
+    public CelestialBodyIterator iterator() {
+        return tree.iterator();
+    }
+}
 /*
 Zusatzfragen:
 
@@ -232,12 +299,13 @@ Zusatzfragen:
             Bei der bodiesAsCelestialSystem() Methode handelt es sich um ein deep copy, wobei die Werte
             der Baum-Objekte kopiert werden, aber als neues Objekt mit einer anderen Referenz instanziert
             werden. Darum werrden bei einem move() Aufruf auf diese Objekte die Baum-Objekte nicht bewegt.
-__________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________
 2. Wie verhalten sich Ihre Iteratoren, wenn Objekte geändert werden?
 
-   Antwort: //TODO
-
-
+   Antwort: Die Iteratoren verändern durch das verändern von Objekten nicht beeinflusst, wenn ein Iterator vor dem
+            ändern eines Objekts am Ende der zu iterierenden Objekten ist, ist er auch nach dem ändern am Ende.
+            Wenn der Iterator vor dem ändern noch nicht am Ende ist, iteriert er nach dem ändern weiter und die
+            geänderten Objekte bleiben unberücksichtigt.
  */
 
 
